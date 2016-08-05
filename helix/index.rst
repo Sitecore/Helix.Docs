@@ -9,5 +9,5 @@ Sitecore Helix Documentation
     :numbered:
 
     introduction/index
-    patterns principles and conventions/index
-    devops and development lifecycle management/index
+    principles/index
+    devops/index

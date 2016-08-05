@@ -21,6 +21,6 @@ test, extend and maintain as possible.
     :caption: Topics
     :titlesonly:
 
-    what is helix and habitat
-    reading this documentation
+    what-is-helix
+    reading
     definitions

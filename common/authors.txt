@@ -1,0 +1,2 @@
+﻿.. _Thomas Eldblom: http://www.sitecore.net/learn/blogs/best-practice-blogs/thomas-eldblom/author.aspx
+

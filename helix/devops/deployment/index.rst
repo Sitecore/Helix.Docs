@@ -5,5 +5,5 @@ Deployment
     :caption: Topics 
     :titlesonly:
 
-    deployment strategy
-    what to deploy and to where
+    strategy
+    what-to-deploy

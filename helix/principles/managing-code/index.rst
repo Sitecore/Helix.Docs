@@ -5,4 +5,4 @@ Working with code
     :caption: Topics 
     :titlesonly:
 
-    code formatting
+    code-formatting

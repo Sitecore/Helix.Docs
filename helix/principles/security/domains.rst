@@ -28,7 +28,7 @@ have two domains *ProjectA* and *ProjectB*:
    gain rights to the *ProjectB* content.
 
 If there is a need for more granular rights on a feature level (as
-described in 2.10.1) it could be beneficial to add an additional domain
+described in :doc:`/principles/security/rights`) it could be beneficial to add an additional domain
 on which modules across the layers can register feature level roles.
 Using the previous example:
 

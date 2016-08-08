@@ -10,7 +10,7 @@ When dealing with datasource locations and datasource templates,
 Sitecore offers limited help in overcoming these dependencies – and
 therefore, to preserve the stringency of the architecture, you will have
 to do introduce custom logic to overcome this limitation, typically by
-introducing a Foundation module (See 2.6.3.2).
+introducing a Foundation module (See :doc:`/principles/architecture-principles/layers`).
 
 Datasource Template
 ^^^^^^^^^^^^^^^^^^^
@@ -25,13 +25,13 @@ that you can select an item based on the specified template, or an item
 based on a template that derives from the specified template. This is
 very useful since a rendering in a Feature layer module most often
 relies on an Interface Template – which should be defined in the same
-Feature layer module (See 2.5.3.1). The problem is, however, that
+Feature layer module (See :doc:`/principles/templates/template-types`). The problem is, however, that
 Sitecore will use the specified template as the template for new items
 created through the Select the Associated Content dialog. This means
 that even though Sitecore supports it, you should not specify an
 Interface Template in the Datasource Template field, as you will end up
 with pages or datasource items based on this template – which ends up
-violating the architecture and create dependencies (see 2.5.3).
+violating the architecture and create dependencies (see :doc:`/principles/architecture-principles/dependencies`).
 
 .. figure:: _static/image32.png
 
@@ -39,7 +39,7 @@ violating the architecture and create dependencies (see 2.5.3).
 
 Unless you plan to disable the opportunity to create new content in the
 Associated Content dialog or simply ignore the architectural principles
-and specify a Page Type or Datasource Template (see 2.5.3) in the
+and specify a Page Type or Datasource Template (see :doc:`/principles/templates/template-types`) in the
 Datasource Template field, there is no easy solution for this conundrum.
 However, Sitecore does allow you to hook in to a pipeline to resolve the
 datasource template in context and thus be smarter around this. See the
@@ -76,7 +76,7 @@ challenged by the content governance model. Habitat provides an example.
     The Habitat example site is a true multi-tenant and multi-site solution.
     The Habitat project layer module, as well as our internally built
     product demonstrations, represent tenants (and sites) that define their
-    own page types and datasource locations (see 2.8).
+    own page types and datasource locations (see :doc:`/principles/multi-site/index`).
 
     In order to accommodate this scenario, the datasource location and
     template resolution have been extended in the Habitat project. This

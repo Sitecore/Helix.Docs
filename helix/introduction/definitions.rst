@@ -47,7 +47,7 @@ Tenant
     Sitecore allows multiple tenants to share a single *implementation*,
     which allows certain resources to be shared (such as templates and
     digital assets), while allowing other resources (such as sites and other
-    business entities) to be defined and managed independently (see 2.8).
+    business entities) to be defined and managed independently (see :doc:`/principles/multi-site/index`).
 
 Site
     A collection of content and output with a common overall business

@@ -16,8 +16,9 @@ which they belong.
         :scale: 75%
 
         Figure: Project grouping. Please note that even though the
-        SpecFlow (see 3.3) projects might test the individual features, they
-        are grouped with the Sitecore.Habitat project because they depend on
+        SpecFlow (see :doc:`/devops/testing/integration-testing`) projects 
+        might test the individual features, they are grouped with the 
+        Sitecore.Habitat project because they depend on
         the entire running website, and therefore the Sitecore.Habitat
         module.
 

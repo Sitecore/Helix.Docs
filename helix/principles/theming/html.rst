@@ -15,7 +15,7 @@ multi-site scenario, the challenge is that features need to address
 multiple business requirements – or simply different visual designs.
 
 In other words, in a multi-tenant scenario some assets will always be
-shared between tenants (see 2.8) and when following the Helix
+shared between tenants (see :doc:`/principles/multi-site/index`) and when following the Helix
 conventions, the mark-up is very often one of these assets.
 
 In a single tenant scenario, this is not such a big issue, as features

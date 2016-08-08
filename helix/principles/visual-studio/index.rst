@@ -33,6 +33,6 @@ Studio project together by technology or type.
     :caption: Topics 
     :titlesonly:
 
-    implementation structure
-    solution structure
+    structure
+    solutions
     projects

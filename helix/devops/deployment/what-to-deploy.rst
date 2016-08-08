@@ -3,7 +3,7 @@ What to deploy and to where
 
 Some data and configuration will sit outside the development and build
 phases of the application lifecycle. Therefore, your process should
-cater for this environment specific data or configuration (see 2.7.2.1).
+cater for this environment specific data or configuration (see :doc:`/principles/configuration/value-scope`).
 
 Some data and configuration is owned by the development process (such as
 C# code, views and the template structure) while others are owned by the

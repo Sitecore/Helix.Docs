@@ -74,7 +74,7 @@ Sitecore:
     In Habitat the Sitecore root folders for the layers – as described above
     - are managed by the Sitecore.Foundation.Serialization project, as this
     project is the foundation for Sitecore content serialization in the
-    solution. (See 2.4.2)
+    solution. (See :doc:`/principles/sitecore-items/development`)
 
     In Visual Studio, the layers are defined as solution folders:
 
@@ -118,13 +118,13 @@ fewest dependencies on it.
 
 The Project layer is typically small and contains few modules, often
 determined by the number of tenants in the solution and their needs (See
-2.8).
+see :doc:`/principles/multi-site/index`).
 
 Typically, in a single tenant solution there will only be a single
 module, namely the specific website or requirements that fits the needs
 of the tenant, and this will contain little or no pre-compiled code but
 instead consist of mark-up, styling, layout and templates of
-the item types in Sitecore which the editors can create (see 2.5.3.2).
+the item types in Sitecore which the editors can create (see :doc:`/principles/templates/template-types`).
 
 .. admonition:: Habitat Example
 
@@ -174,9 +174,9 @@ without impacting other features. For example, in a Sitecore context, it
 is important that all Sitecore items – such as the interface templates
 and rendering items – are managed, versioned and packaged with the views
 and code files of the feature. This can be done by serialization (see
-2.4.2). Likewise, changes to configuration files (web.config or Sitecore
+:doc:`/principles/sitecore-items/development`). Likewise, changes to configuration files (web.config or Sitecore
 .config include files) must be managed as part of the feature module
-(see 2.7).
+(see :doc:`/principles/configuration/index`).
 
 A strict awareness of dependencies within the Feature layer is very
 important. One Feature module must \ *never* depend on another Feature
@@ -188,15 +188,16 @@ and you will have to rely on architectural patterns to get around this.
 For example, website search will rely on data from other modules as part
 of the indexing and search results rendering. To get around this a
 typical approach would be to add the concept of indexing and rendering
-search results to a foundation level module (see 2.1.2.3) which the
+search results to a foundation level module (see :doc:`/principles/architecture-principles/layers`) which the
 Search feature module then utilises. Other modules can then offer their
 content to search by plug into the indexing and rendering functionality
 in the foundation module – through for example an inversion of control
 pattern.
 
 Note that although, several modules in the Feature layer can be grouped
-together semantically (see 2.1.3.1) this only suggests a conceptual
-coherence between modules – not in any way a technical dependency.
+together semantically (see :doc:`/principles/architecture-principles/modules`) 
+this only suggests a conceptual coherence between modules – not in any 
+way a technical dependency.
 
 Foundation Layer
 ^^^^^^^^^^^^^^^^
@@ -233,7 +234,7 @@ stability of the solution.
     CSS is the single most common cause for implicit dependencies between
     modules, so be sure to have a strategy for how to deal with the
     graphical design implementation in your Helix compliant solution (see
-    2.12).
+    :doc:`/principles/theming/index`).
 
 Typically, modules in the Foundation layer are either business-logic
 specific extensions on the technology frameworks used in the

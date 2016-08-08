@@ -130,7 +130,7 @@ a, a:link, a:visited { color: #2b59a9; }
 {
     text-indent: -9999px;
     width: 100%;
-    background: url('nav-logo-dynamics-crm-connect.png') no-repeat;
+    background: url('header-logo.png') no-repeat;
     height:50px;
     margin:0px;
     margin-bottom:10px;
@@ -246,6 +246,10 @@ a, a:link, a:visited { color: #2b59a9; }
     text-decoration: underline;
 }
 
+.rst-content .reference.internal .doc:after {
+    content: "\a0\f18e";
+    font: normal normal normal 14px/1 FontAwesome;
+}
 .rst-content ul li.toctree-l1>a {
     font-weight: bold;
 }

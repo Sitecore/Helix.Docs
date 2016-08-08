@@ -49,7 +49,7 @@ workflows and more.
 
 It is recommended that each tenant in a Helix compliant implementation
 has its own project layer module, i.e. that each tenant has the freedom
-to define its own set of datasource and page type templates (see 2.5.3)
+to define its own set of datasource and page type templates (see :doc:`/principles/templates/template-types`)
 as well as its own overall page layouts and sub layouts. If multiple
 tenants share templates or layouts, it is recommended to have a shared
 project layer module to host these entities. This gives the flexibility
@@ -67,7 +67,7 @@ content hierarchy and security. By defining organisational roles, users
 can belong to different tenants and content can be shared or separated.
 Because of the powerful, feature-rich and fine grained security model in
 Sitecore, pretty much any business requirements can be met. See more on
-security in Helix in 2.10.
+security in Helix in :doc:`/principles/security/index`.
 
 It is often not relevant for business logic to understand the tenant
 context under which the business logic is running. Tenant related

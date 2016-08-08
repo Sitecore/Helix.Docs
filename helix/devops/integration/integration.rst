@@ -7,8 +7,8 @@ the packages generated in order to allow the deployment process to be as
 simple as possible. The packages should include your implementation
 specific files, standard Sitecore and other framework files,
 configuration files, definition items in the Sitecore databases (see
-2.4.1.1) and any scripts to run during the deployment process. By
-covering as much as possible in this process result in a more simplified
+:doc:`/principles/sitecore-items/item-types`) and any scripts to run during the deployment process. 
+By covering as much as possible in this process result in a more simplified
 deployment process by detaching the deployment process from your
 development tools and repositories. Ideally only the configuration of
 the specific environment and roles should happen during the deployment

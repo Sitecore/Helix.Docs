@@ -2,7 +2,7 @@ References from code
 ~~~~~~~~~~~~~~~~~~~~
 
 In Sitecore solutions, references to templates and fields are among the
-most frequent sources of rogue dependencies across modules (see 2.1.1).
+most frequent sources of rogue dependencies across modules (see :doc:`/principles/architecture-principles/dependencies`).
 Therefore, maintaining tight control over these dependencies is
 important in a Sitecore project.
 
@@ -82,7 +82,16 @@ template or field in another module, it should reference the Templates
 struct in that module.
 
 The practice of referencing different fields across modules by their
-shared name – an equivalence to *duck typing*\  [5]_ – is discouraged.
+shared name – an equivalence to *duck typing* – is discouraged.
+
+.. note::
+    
+    **Duck Typing**
+
+    “If it walks like a duck and it quacks like a duck, then it is a duck”
+
+    https://en.wikipedia.org/wiki/Duck_typing
+
 An often seen Sitecore example of this is to define that any field named
 “Title” is used as the header of the page. The problem of this is that
 “Title” might have different connotations for different content types.

@@ -9,7 +9,7 @@ renderings to layouts via layout definitions and placeholders. Static
 binding will make the page and solution structure less flexible and
 introduces multiple maintenance methodologies. Although you might end up
 with longer lists of renderings in your layout definitions, the
-centralised Page Type templates (see 2.5.3.2) and single layout
+centralised Page Type templates (see :doc:`/principles/templates/template-types`) and single layout
 management methodology will prove more maintainable and flexible in the
 long run.
 
@@ -25,7 +25,7 @@ project specific mark-up, they belong in Project layer modules.
 
 Reduce the number of layouts and sub-layouts by dynamically assembling
 the pages in layout definitions and controlling assets such as scripts
-and CSS on pages using asset management techniques (see 2.12). In some
+and CSS on pages using asset management techniques (see :doc:`/principles/theming/index`). In some
 scenarios, for example when implementing adaptive design using the
 Devices in Sitecore, multiple layouts can be required, but in most
 scenarios a single layout per site type or project module is sufficient.
@@ -53,7 +53,7 @@ https://marketplace.sitecore.net/en/Modules/I/Integrated_Dynamic_Placeholders.as
         Figure: Habitat sub-layouts defined as View Renderings in the
         Project/Common module
 
-    .. code-block:: csharp
+    .. code-block:: html
 
         @using Sitecore.Foundation.Assets
         @using Sitecore.Foundation.Assets.Models

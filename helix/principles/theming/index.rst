@@ -16,7 +16,7 @@ maturity and so on.
     :caption: Topics 
     :titlesonly:
 
-    front-end technologies
-    html mark-up
-    css and theming
+    technologies
+    html
+    css
     scripting

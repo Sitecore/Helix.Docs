@@ -26,7 +26,7 @@ depending on what purpose they serve:
    scripts that relate to the holistic visual design of the page and its
    CSS, and scripts that often require knowledge of the DOM of the page
    in order to function. These types of scripts belong with the page or
-   site specific design implementation in the Project layer (see 2.12.3)
+   site specific design implementation in the Project layer (see :doc:`/principles/theming/scripting`)
 
 In order to support this type of separation, the implementation will
 need a mechanism for features to register scripts to be loaded – either

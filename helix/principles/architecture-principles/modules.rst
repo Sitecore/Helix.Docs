@@ -3,7 +3,7 @@ Modules
 
 The concept of modules in Helix is derived from the concept of
 components in Component-based Architecture, which is described in the
-book Agile Software Development by Robert C. Martin [2]_. However, in
+book `Agile Software Development by Robert C. Martin <http://www.amazon.com/Software-Development-Principles-Patterns-Practices/dp/0135974445>`__. However, in
 the Sitecore context the word “component” might be confusing as it often
 refers to an element of a page – a rendering – and therefore a more
 generally accepted term *module* is used.
@@ -43,7 +43,7 @@ technical debt you are trying to avoid.
 
 The name of a module should reflect the business requirement or the use
 case of the feature – never the technology or implementation – and
-should always be in the domain language. See 2.1.4.
+should always be in the domain language. (See :doc:`/principles/architecture-principles/domain-language`).
 
 .. admonition:: Habitat Example
 

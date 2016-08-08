@@ -4,7 +4,7 @@ Deploying items
 Even though the details of integrating and deploying your implementation
 can be very specific to the business requirements, there are general
 recommendations to integrating and deploying your items through
-development to production environments (see 3.4).
+development to production environments (see :doc:`/devops/deployment/index`).
 
 Just as it is recommended to version and manage items and business logic
 together in your development process, it is also highly recommended to
@@ -21,7 +21,7 @@ Note that the modularity of Helix is in no way meant as a general
 modular approach to deploying and running Sitecore in production. Even
 if you version and maintain modules separately in the development
 process, your entire implementation should be integrated and deployed in
-a single versioned process (See 3.2).
+a single versioned process (See :doc:`/devops/integration/index`).
 
 .. admonition:: Habitat Example
 

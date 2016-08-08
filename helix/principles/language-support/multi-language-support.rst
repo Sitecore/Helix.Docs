@@ -20,7 +20,7 @@ depending on language.
 
 Languages are defined on a global implementation-scope level in Sitecore
 and thus all sites and tenants will have the same languages installed.
-In a multi-tenant and multi-site scenario (see 2.8) consider adding
+In a multi-tenant and multi-site scenario (see :doc:`/principles/multi-site/index`) consider adding
 business logic to make languages and cultures configurable by site and
 tenant.
 

@@ -20,7 +20,7 @@ scripts, configuration files, Sitecore definition items, and build
 scripts package manifests.
 
 Some types of data can be harder to version control than others – for
-example Sitecore items – (see 2.4). Finding tools to manage all types of
+example Sitecore items – (see :doc:`/principles/sitecore-items/index`). Finding tools to manage all types of
 data through version control should be a priority as it will greatly
 diminish the risk of manual errors and inconsistent deployments.
 
@@ -33,7 +33,7 @@ and control the various parts of your solution, limit your version
 control system to only contain the implementation additions and changes.
 As much as possible, avoid adding standard frameworks and standard files
 to version control. This includes the implementation web.config and
-standard Sitecore config files (see 2.7.3).
+standard Sitecore config files (see :doc:`/principles/configuration/managing-config-files`).
 
 There are a number of package managers, for example NuGet, Bower,
 node/npm, that are useful to help install and integrate external

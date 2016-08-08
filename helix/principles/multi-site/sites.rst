@@ -89,7 +89,7 @@ example the Multiple Sites Manager in Sitecore Marketplace
 https://marketplace.sitecore.net/Modules/M/Multiple_Sites_Manager.aspx).
 
 When adding properties to the site definitions and context, consider the
-separation between configuration and settings (see 2.7). In a standard
+separation between configuration and settings (see :doc:`/principles/configuration/index`). In a standard
 configuration scenario, site definition additions should be added to the
 <site> definition in the configuration file. To add editor managed
 settings to the site, modules should define templates which can be added
@@ -100,7 +100,7 @@ you define context specific settings. Also, be conscious that advanced
 settings might be confusing for the average editor, so consider limiting
 visibility of and access to these settings to administrative users.
 
-    .. admonition:: Habitat Example
+.. admonition:: Habitat Example
 
     The Habitat example site generally uses the base templates approach, for
     example, the Feature/Accounts module defines an AccountsSettings
@@ -110,7 +110,7 @@ visibility of and access to these settings to administrative users.
     The module uses the site hierarchy to find the settings items for the
     module.
 
-    .. code-block:: csharp
+    .. code-block:: c#
 
         public virtual Item GetAccountsSettingsItem(Item contextItem)
         {
@@ -127,4 +127,4 @@ visibility of and access to these settings to administrative users.
 
 Keep in mind that parts of the site definition configuration or settings
 can be environment specific, and should the managed with an environments
-specific perspective (see 2.7).
+specific perspective (see :doc:`/principles/configuration/index`).

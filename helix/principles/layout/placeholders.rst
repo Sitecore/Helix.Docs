@@ -4,7 +4,7 @@ Placeholders
 Placeholders in Sitecore allow the dynamic assembly of page layouts
 either by allowing the editors to design specific pages, or by allowing
 administrators to create predefined variations of layouts on Page Type
-templates (see 2.5.3.2). Most often, placeholders are contained in the
+templates (see :doc:`/principles/templates/template-types`). Most often, placeholders are contained in the
 layouts and sub-layouts in the Project layer modules. In rare cases
 renderings in feature or foundation modules can contain placeholders,
 for example when dealing with elastic or composite page components such

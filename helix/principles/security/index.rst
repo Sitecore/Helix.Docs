@@ -15,6 +15,6 @@ and any multi-tenant requirements.
     :caption: Topics 
     :titlesonly:
 
-    rights management
+    rights
     domains
     workflows

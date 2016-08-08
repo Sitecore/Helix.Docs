@@ -6,7 +6,7 @@ if "%SPHINXBUILD%" == "" (
 	set SPHINXBUILD=sphinx-build
 )
 set BUILDDIR=_build
-set ALLSPHINXOPTS=-d %BUILDDIR%/doctrees -n %SPHINXOPTS% .
+set ALLSPHINXOPTS=-d %BUILDDIR%/doctrees -w %BUILDDIR%/build.log -n %SPHINXOPTS% .
 set I18NSPHINXOPTS=%SPHINXOPTS% .
 if NOT "%PAPER%" == "" (
 	set ALLSPHINXOPTS=-D latex_paper_size=%PAPER% %ALLSPHINXOPTS%
@@ -86,7 +86,7 @@ if "%1" == "singlehtml" (
 )
 
 if "%1" == "livehtml" (
-	sphinx-autobuild -b html %ALLSPHINXOPTS% %BUILDDIR%/html
+	sphinx-autobuild -b html -i %BUILDDIR%/*.log %ALLSPHINXOPTS% %BUILDDIR%/html
 	if errorlevel 1 exit /b 1
 	goto end
 )
@@ -98,7 +98,6 @@ if "%1" == "pdf" (
 	echo.Build finished; your pdf is now in %BUILDDIR%/pdf
 	goto end
 )
-
 
 sphinx-build -b pdf source build/pdf
 if "%1" == "pickle" (

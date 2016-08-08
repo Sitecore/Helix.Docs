@@ -8,6 +8,6 @@ implementation, so are Sitecore items.
     :caption: Topics 
     :titlesonly:
 
-    item types
-    managing items in development
-    deploying items
+    item-types
+    development
+    deploying

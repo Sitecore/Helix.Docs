@@ -47,7 +47,7 @@ inherently contains references to renderings in other features, which
 means that templates defined in one feature will start referencing other
 features, thus breaking the architectural principles, creating
 dependencies and ultimately leading to higher coupling and less
-flexibility and stability in the solution (see 2.1.1).
+flexibility and stability in the solution (see :doc:`/principles/architecture-principles/dependencies`).
 
 Interface templates are prefixed with an underscore (\_) to signify that
 they are interface templates and cannot be instantiated as items.
@@ -74,10 +74,10 @@ Fields
 The content fields for business and presentation logic all live in
 Interface Templates – never in Page Type templates or Datasource
 Templates. Therefore, these content fields live with the logic that use
-them (see 2.5.4).
+them (see :doc:`/principles/templates/references`).
 
 Since fields and templates should always be referred to by ID and not by
-name (see 2.5.4), try to be as descriptive and editor friendly as
+name (see :doc:`/principles/templates/references`), try to be as descriptive and editor friendly as
 possible when choosing a field name. Even though the item used to define
 a field has a Title field that can be used to specify an editor-friendly
 name for the field, it is common that this configuration option is not
@@ -86,7 +86,7 @@ Therefore, avoid CamelCasing or AbbevInFldNames as this is not
 considered editor friendly – in other words, always prioritize the
 editor experience over technical considerations.
 
-See more about fields and language support in 2.9
+See more about fields and language support in :doc:`/principles/language-support/index`
 
 Page Type Templates
 ^^^^^^^^^^^^^^^^^^^

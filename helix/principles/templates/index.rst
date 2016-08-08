@@ -33,5 +33,5 @@ focus on organisation structure, security, languages, etc.
 
     structure
     inheritance
-    template types
-    references from code
+    template-types
+    references

@@ -23,8 +23,7 @@ change the values in Sitecore, while allowing deployments and the IT
 application lifecycle to manage the environment’s specific values.
 
 Do not manage environment scoped values as part of the development
-process, but rather as part of your deployment procedure (see deployment
-in 3.4).
+process, but rather as part of your deployment procedure (see :doc:`/devops/deployment/index`).
 
 Role scoped values
 ^^^^^^^^^^^^^^^^^^

@@ -129,7 +129,7 @@ html_theme = 'sphinx_rtd_theme'
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 def setup(app):
-    app.add_stylesheet('custom.css?v=6')
+    app.add_stylesheet('custom.css')
 
 #html_theme = 'default'
 
@@ -198,7 +198,7 @@ html_show_sourcelink = False
 html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
-#html_show_copyright = True
+html_show_copyright = True
 
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the
@@ -216,7 +216,7 @@ htmlhelp_basename = 'sitecore-helix'
 
 latex_elements = {
 # The paper size ('letterpaper' or 'a4paper').
-#'papersize': 'a4paper',
+'papersize': 'a4paper',
 
 # The font size ('10pt', '11pt' or '12pt').
 #'pointsize': '10pt',
@@ -242,7 +242,7 @@ latex_documents = [
 #latex_use_parts = False
 
 # If true, show page references after internal links.
-#latex_show_pagerefs = False
+latex_show_pagerefs = True
 
 # If true, show URL addresses after external links.
 #latex_show_urls = False

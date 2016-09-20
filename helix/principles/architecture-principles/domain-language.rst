@@ -27,9 +27,9 @@ is using multiple terminologies at once.
 
 Also be cautious that terminology can be ambiguous between domains, for
 example the marketing and technology domain, and a specific technical
-tool can define a business domain term is another way than the common or
+tool can define a business domain term in another way than the common or
 individual company understanding. For example, the Sitecore Experience
-Platform uses the terms campaign and template very particular ways – and
+Platform uses the terms campaign and template in very particular ways – and
 is often in conflict with the common understanding in the marketing
 domain.
 

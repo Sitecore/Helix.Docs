@@ -32,6 +32,6 @@ be tested and deployed consistently through the environments (see :doc:`/devops/
 It is recommended to run deployment builds – and continuous integration
 builds – on a separate build server, using a dedicated build system such
 as Microsoft Team Foundation Server, Visual Studio Team Services,
-TeamCity, Jenkins, Bamboo, etc. This helps assures a consistent build
+TeamCity, Jenkins, Bamboo, etc. This assures a consistent build
 and integration process, which is important for quality in the
 deliveries and agility in development and support.

@@ -35,9 +35,9 @@ context-aware as possible, for example in terms of support for
 multi-site, multi-tenant or multi-language. For example, by moving a
 configurable path from a Solution-wide configuration under
 <sitecore><settings> in the to the Sitecore <site> node in the
-web.config, can help make a feature site context specific - or by
-changing a setting fields Shared value can make a feature language
-context specific.
+web.config, one can help make a feature site context specific - or by
+changing the value of an Unversioned setting field, one can make a 
+feature context language specific.
 
 Context-wide
 ^^^^^^^^^^^^

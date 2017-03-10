@@ -117,8 +117,7 @@ thus, remembering the Stable Dependency Principle, should have the
 fewest dependencies on it.
 
 The Project layer is typically small and contains few modules, often
-determined by the number of tenants in the solution and their needs (See
-see :doc:`/principles/multi-site/index`).
+determined by the number of tenants in the solution and their needs (See :doc:`/principles/multi-site/index`).
 
 Typically, in a single tenant solution there will only be a single
 module, namely the specific website or requirements that fits the needs

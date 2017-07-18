@@ -18,7 +18,7 @@ implementation specific files are physically separated from the files in
 the standard frameworks etc. On the other hand, tools and processes
 might cater for this separation, even when working inside the web root.
 
-Generally, if tasks that are repeated frequently becomes taxing, they
+Generally, if tasks that are repeated frequently become taxing, they
 will be circumvented – and this will lead to inconsistencies in the
 processes and ultimately inconsistencies in quality. Therefore,
 secondly, the ease of development is important. Working outside the web

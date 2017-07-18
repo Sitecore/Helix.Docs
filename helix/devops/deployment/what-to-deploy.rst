@@ -101,7 +101,7 @@ Once you have mapped the ownership and direction of data in your
 implementation, avoid making changes that violate this, for example by
 submitting code or configuration changes directly to test or product
 environments and circumventing the QA and development procedures.
-Violating this mapping is highly discouraged and should be avoided as
+Violating this mapping is highly discouraged and should be avoided at
 all cost.
 
 Consider every type of deployment onto the environments, including

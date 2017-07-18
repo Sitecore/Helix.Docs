@@ -31,10 +31,10 @@ depending on what purpose they serve:
 In order to support this type of separation, the implementation will
 need a mechanism for features to register scripts to be loaded – either
 solution-wide or on the pages where they are used. Since Sitecore does
-not natively provide such a mechanism, your will need to choose the
-approach and provide this in the foundation layer. This can be
+not natively provide such a mechanism, you will need to choose the
+approach and provide this in the Foundation layer. This can be
 accomplished by using either a standard framework, such as require.js,
-or custom logic implemented in a foundation layer module.
+or custom logic implemented in a Foundation layer module.
 
 .. admonition:: Habitat Example
 

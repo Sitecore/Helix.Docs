@@ -1,6 +1,7 @@
 Sphinx==1.4.1
 sphinx-rtd-theme
 sphinx-autobuild
-git+git://github.com/danroth27/yasfb-py3
+setuptools
+git+git://github.com/sphinxcontrib/yasfb
 git+git://github.com/rtfd/sphinxcontrib-dotnetdomain
 rst2pdf

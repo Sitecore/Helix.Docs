@@ -30,7 +30,7 @@ Check out
 Dependencies
     Import and configure external frameworks and dependencies
     
-    *For example: Execute package managers such as NuGet or npm or runs custom scripts to restore required dependencies*
+    *For example: Execute package managers such as NuGet or npm or run custom scripts to restore required dependencies*
 
 Build
     Compile the modules

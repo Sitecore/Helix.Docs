@@ -77,7 +77,7 @@ Files
         Environment
             :What is it: Configuration file changes relating to the specific running server or specific environment, for example connection strings, server names, domains etc.
             :Owned by: Deployment    
-            :Direction: Set up by the deployment and managed in the specific environments.|
+            :Direction: Set up by the deployment and managed in the specific environments.
 
 Environment    
     :What is it: The infrastructure needed for running the Sitecore and the application. 
@@ -85,23 +85,23 @@ Environment
     Configuration    
         :What is it: Server or environment specific configurations such as network, DNS, hosts file changes, machine.config etc. 
         :Owned by: Deployment    
-        :Direction: Set up as part of the initial deployment process. Can be automated but often is not.|
+        :Direction: Set up as part of the initial deployment process. Can be automated but often is not.
 
     Services   
         :What is it: Related services running in the environment or on the instance server, for example operating systems, IIS, SQL servers, Windows Services etc.   
         :Owned by: Deployment    
-        :Direction: Set up as part of the initial deployment process. Can be automated but often is not.|
+        :Direction: Set up as part of the initial deployment process. Can be automated but often is not.
 
     Infrastructure   
         :What is it: The underlying server, virtual or physical,     
         :Owned by: Deployment    
-        :Direction: Set up as part of the initial deployment process. Can be automated but often is not.|
+        :Direction: Set up as part of the initial deployment process. Can be automated but often is not.
 
 Once you have mapped the ownership and direction of data in your
 implementation, avoid making changes that violate this, for example by
 submitting code or configuration changes directly to test or product
 environments and circumventing the QA and development procedures.
-Violating this mapping is highly discouraged and should be avoided as
+Violating this mapping is highly discouraged and should be avoided at
 all cost.
 
 Consider every type of deployment onto the environments, including

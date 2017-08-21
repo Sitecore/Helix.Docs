@@ -9,7 +9,7 @@ dependencies that go the wrong way, or dependencies that cross features.
 When dealing with datasource locations and datasource templates,
 Sitecore offers limited help in overcoming these dependencies – and
 therefore, to preserve the stringency of the architecture, you will have
-to do introduce custom logic to overcome this limitation, typically by
+to introduce custom logic to overcome this limitation, typically by
 introducing a Foundation module (See :doc:`/principles/architecture-principles/layers`).
 
 Datasource Template

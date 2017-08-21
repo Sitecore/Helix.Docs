@@ -26,7 +26,7 @@ Folder templates
     scaffolding of the content structure.
 
 ====================  =======================  ======================
-Template Type         Can have a page layout?  Exists is which layers
+Template Type         Can have a page layout?  Exists in which layers
 ====================  =======================  ======================
 Interface template    No                       Feature or Foundation 
 Page type template    **Yes**                  Project

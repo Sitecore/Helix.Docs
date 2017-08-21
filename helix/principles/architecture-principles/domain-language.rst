@@ -11,7 +11,7 @@ users, editors, administrators or visitors. Therefore, establishing a
 common domain language between the developers and business users should
 be a top priority in any project. Likewise, once a domain language has
 been established, it is imperative that the terminology be ubiquitous.
-What is even worse and more confusing than using the wrong terminology,
+What is even worse and more confusing than using the wrong terminology
 is using multiple terminologies at once.
 
 .. admonition:: Habitat Example

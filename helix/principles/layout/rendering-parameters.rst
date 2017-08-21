@@ -11,7 +11,7 @@ template reference any setting items, make sure that the items along
 with their templates reside in the same module (or in a lower layer
 module) as the parameters template itself.
 
-Please, consider carefully what configuration of the rendering belongs
+Please consider carefully what configuration of the rendering belongs
 in the datasource or on the context page, as opposed to the rendering
 parameters. Rendering parameters are generally considered less editor
 friendly than content fields and are often restricted to administrators,

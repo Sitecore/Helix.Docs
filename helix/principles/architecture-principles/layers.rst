@@ -14,7 +14,7 @@ in terms of dependency direction.
 
 Even though layers are a conceptual construct in the architecture,
 layers are physically described in the implementation by folders in the
-filesystem, Visual Studio and Sitecore along with namespaces in code and
+filesystem, Visual Studio and Sitecore, along with namespaces in code and
 layers defines in which direction modules can depend on other modules.
 
 Layers helps control the direction of dependencies – the importance of
@@ -117,7 +117,8 @@ thus, remembering the Stable Dependency Principle, should have the
 fewest dependencies on it.
 
 The Project layer is typically small and contains few modules, often
-determined by the number of tenants in the solution and their needs (See :doc:`/principles/multi-site/index`).
+determined by the number of tenants in the solution and their needs (see
+:doc:`/principles/multi-site/index`).
 
 Typically, in a single tenant solution there will only be a single
 module, namely the specific website or requirements that fits the needs
@@ -146,7 +147,7 @@ Feature Layer
 
 The *Feature* layer contains concrete features of the solution as
 understood by the business owners and editors of the solution, for
-example news, articles, promotions, website search etc.
+example news, articles, promotions, website search, etc.
 
 The features are expressed as seen in the business domain of the
 solution and not by technology, which means that the responsibility of a
@@ -190,10 +191,10 @@ typical approach would be to add the concept of indexing and rendering
 search results to a foundation level module (see :doc:`/principles/architecture-principles/layers`) which the
 Search feature module then utilises. Other modules can then offer their
 content to search by plug into the indexing and rendering functionality
-in the foundation module – through for example an inversion of control
+in the Foundation module – through for example an inversion of control
 pattern.
 
-Note that although, several modules in the Feature layer can be grouped
+Note that although several modules in the Feature layer can be grouped
 together semantically (see :doc:`/principles/architecture-principles/modules`) 
 this only suggests a conceptual coherence between modules – not in any 
 way a technical dependency.
@@ -245,7 +246,7 @@ do not contain presentation in the form of renderings or views - as
 these are to be considered concrete. Some framework modules might still
 contain mark-up in code though, examples being precompiled web-controls
 and html helper functions, but in order to control dependencies, any
-feature or project specific knowledge should be passed as parameters
+Feature or Project specific knowledge should be passed as parameters
 from the depending module.
 
 .. admonition:: Habitat Example
@@ -259,7 +260,7 @@ from the depending module.
     anything about the new module or its content.
 
 Unlike the Feature layer, there is no strict convention on dependencies
-between modules in the foundation layer. This means that one Foundation
+between modules in the Foundation layer. This means that one Foundation
 layer module can depend on another Foundation layer module in the
 solution – as long as they rely on the basic principles on component
 architecture such as the Acyclic Dependencies Principle and the Stable

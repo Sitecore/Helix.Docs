@@ -55,7 +55,7 @@ Types of dependencies
 ^^^^^^^^^^^^^^^^^^^^^
 
 In software, dependencies can either be explicit or implicit. Examples
-of explicit dependencies are the keyword using in C#, and a reference in
+of explicit dependencies are the keyword :code:`using` in C#, and a reference in
 one assembly to another. Examples of implicit dependencies are a class
 string in the HTML mark-up, references to Sitecore fields by name or
 reliance on specific technology behaviours in one module without
@@ -64,7 +64,7 @@ interface of the module.
 
 It is very important to stress that conceptually, as well as
 practically, all dependencies between modules count. In a Sitecore
-context this, includes not only references between C# classes and .NET
+context this includes not only references between C# classes and .NET
 assemblies, but also references from code to Sitecore templates and
 fields, references between templates, references from templates to
 renderings, references from HTML mark-up to CSS and so on. Therefore,

@@ -4,7 +4,7 @@ Renderings
 Renderings, whether they are Controller or View Renderings typically
 belong to the Feature layer modules as they are connected to business
 features in the solution. In rare examples renderings can occur in the
-Foundation layer too although this should generally be avoided. Only
+Project layer too although this should generally be avoided. Only
 sub-layout style renderings, i.e. view renderings with no business logic
 but purely mark-up structure and placeholders, should occur in the
 Project layer. Any controller renderings in project modules are

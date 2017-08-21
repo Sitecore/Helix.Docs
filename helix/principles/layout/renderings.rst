@@ -2,17 +2,23 @@ Renderings
 ~~~~~~~~~~
 
 Renderings, whether they are Controller or View Renderings typically
-belong to the Feature layer modules as they are connected to business
-features in the solution. In rare examples renderings can occur in the
-Project layer too although this should generally be avoided. Only
-sub-layout style renderings, i.e. view renderings with no business logic
+belong to the *Feature* layer modules as they are connected to business
+features in the solution.  
+
+Only sub-layout style renderings, i.e. view renderings with no business logic
 but purely mark-up structure and placeholders, should occur in the
-Project layer. Any controller renderings in project modules are
+*Project* layer. Any controller renderings in project modules are
 typically an example of business logic creeping into the project layer,
 which should always be avoided.
 
+In rare occasions renderings can occur in the *Foundation* layer, although this should generally be avoided. 
+Examples could be a rendering which purely output metadata on the page or is only executing business logic.
+
+Design for simplicity
+---------------------
+
 When designing your business-centric feature modules, keep in mind that
-you are designing for maintainability and simplicity, not for
+you are designing and implementing for maintainability and simplicity, not for
 reusability. This means that you should keep focus on simplicity in the
 razor views and avoid advanced configuration options. In other words, if
 multiple variations of a view are required, prioritize the simplicity of

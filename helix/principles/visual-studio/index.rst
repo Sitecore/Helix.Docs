@@ -16,7 +16,7 @@ technical debt.
 
 In large scale implementations, it is therefore often helpful to break
 down your implementation into multiple Visual Studio Solutions – each
-with a logical grouping, for example independent foundation modules,
+with a logical grouping, for example independent Foundation modules,
 cross-project or reusable modules or feature groupings such as Basic
 Website or Commerce features.
 

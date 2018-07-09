@@ -7,9 +7,14 @@ groupings. One VS solution could represent an entire Sitecore
 implementation, with all Project, Foundation and Feature layer modules
 managed together, while another Sitecore implementation could span
 multiple VS solutions, with one VS solution grouping together the
-feature modules for commerce, another VS solution housing the regular
-website features and with the Project layer modules in additional VS
-solutions per tenant.
+all the modules which target the Commerce Engine and another VS solution housing the 
+modules that purely target the website. You could also have additional VS
+solutions per tenant. 
+
+It is important to remember that when adding modules
+to split solutions like this you must include all elements of the module 
+(for example the website code assembly, Commerce Engine code assembly, unit tests, 
+item serialization projects etc.) to still conform with the Common Closure Principle. 
 
 How a customer implementation is structured between Visual Studio
 solutions is entirely up the requirements, complexity and logical
@@ -17,7 +22,7 @@ architecture of the specific customer implementation. Be aware that a
 Visual Studio Solution should logically group together conceptual
 modules – not VS projects – and therefore all Visual Studio projects
 belonging to a logical module should be managed together in one VS
-solution.
+solution regardless of how many subsystems it targets.
 
 .. admonition:: Habitat Example
 

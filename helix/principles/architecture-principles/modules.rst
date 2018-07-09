@@ -62,6 +62,11 @@ should always be in the domain language. (See :doc:`/principles/architecture-pri
     The Social feature enables Twitter feeds on the pages as well as
     allows the editor to add Facebook metadata to the website pages.
 
+  Feature/Cart
+    All of the elements that allow users to add Sellable Items to a cart.
+    This includes renderings used on the website, and also the plugin that
+    provides the functionality in the Commerce Engine.
+
   Foundation/Indexing
     This Foundation layer module provides an abstraction layer on the
     search functionality of Sitecore and allows features both to search

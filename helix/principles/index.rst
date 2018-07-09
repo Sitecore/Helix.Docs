@@ -45,6 +45,7 @@ solution.
     templates/index
     layout/index
     configuration/index
+    subsystems/index
     multi-site/index
     language-support/index
     security/index

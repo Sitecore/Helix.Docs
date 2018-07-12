@@ -10,7 +10,7 @@ different xConnect instances.
 The most important thing to remember with these subsystems is that
 you should still abide by the Common Closure Principal - Classes 
 that change together are packaged together. This means that you 
-shouldn't for example group all of your Commerce functionality
+shouldn't, for example group all of your Commerce functionality
 together as then you're reverting to grouping by Type instead of by
 Functionality.
 

@@ -25,7 +25,7 @@ Not all of your modules will contain functionality that runs on both the
 Website & in the Commerce Engine, but it is very common. For example a Product
 Compare module that stores the list of products in the Engine, and displays this
 list to the end user on the Website. In this scenario the functionality will
-be split between the Engine & the Website - however as these two element are very
+be split between the Engine & the Website - however as these two elements are very
 coherent the Common Closure Principal states that should live together. 
 
 .. figure:: _static/CommerceModule.png
@@ -41,7 +41,7 @@ being targeted by that project.
 
 Commerce Engine
 ^^^^^^^^^^^^^^^^^^^^^
-The Commerce Engine is the .NET Core appliction that provides the commerce functionality
+The Commerce Engine is the .NET Core application that provides the commerce functionality
 to a Sitecore Experience Commerce installation. This functionality is made up of
 both Feature & Foundation modules. The .NET Core application then references all of these
 modules to pull all of this together and form the final deployable asset for the Engine roles. 

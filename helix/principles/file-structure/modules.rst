@@ -1,7 +1,7 @@
 Module structure
 ~~~~~~~~~~~~~~~~
 
-Each module has the following structure, note that not all modules will contain all of the elements:
+Each module has the following structure:
 
 ::
 
@@ -18,3 +18,7 @@ Each module has the following structure, note that not all modules will contain 
 
         Figure: Solution and module structure on disk
 
+Note that not all modules will contain all of the elements seen above. Some of
+your modules will contain functionality that only executes on the website, some 
+will contain functionality that only executes on the Commerce Engine, and some 
+will contain functionality that executes on both.

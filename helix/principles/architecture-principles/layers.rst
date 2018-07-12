@@ -153,7 +153,7 @@ Feature Layer
 The *Feature* layer contains concrete features of the solution as
 understood by the business owners and editors of the solution, for
 example news, articles, promotions, website search, product listings,
-shopping cart functionality etc.
+shopping cart functionality, etc.
 
 The features are expressed as seen in the business domain of the
 solution and not by technology, which means that the responsibility of a

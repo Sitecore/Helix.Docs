@@ -31,10 +31,9 @@ coherent the Common Closure Principal states that should live together.
 .. figure:: _static/CommerceModule.png
 
 You can see that the example Feature module above contains a series of projects, each
-with its own responsibility. One houses the code that runs in the Engine, another is
-responsible for the Serialisation of Content Items, one handles the Unit Tests
-and the final one houses the code that runs in the website. Crucially however all of this 
-code exists together in same module.
+with its own responsibility. One houses the code that runs in the Commerce Engine, one handles 
+the Unit Tests and the final one houses the code that runs in the website. Crucially however 
+all of this code exists together in same module.
 
 Note also that a suffix on the project name is used to show the subsystem that is
 being targeted by that project.

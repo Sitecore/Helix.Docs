@@ -68,15 +68,14 @@ Role and environment-specific and configuration
 You may need to alter the behavior of your Sitecore implementation based on *server role*,
 e.g. Content Management or Content Delivery. You should take advantage of
 `rule-based configuration <https://doc.sitecore.net/sitecore_experience_platform/developing/developing_with_sitecore/customizing_server_configuration/rulebased_configuration>`_
-for these scenarios in order to simplify deployment.
-
-You can also utilize
+for these scenarios in order to simplify deployment. You can also utilize
 `custom rules <https://doc.sitecore.net/sitecore_experience_platform/developing/developing_with_sitecore/customizing_server_configuration/add_a_custom_rule_to_your_configuration>`_
 to dynamically apply different configuration for different environments, such as Development/QA/Production.
-You should place any environment-specific configuration in the ``App_Config\Environment``
+
+You may also place environment-specific configuration in the ``App_Config\Environment``
 `configuration layer <https://doc.sitecore.net/sitecore_experience_platform/developing/developing_with_sitecore/customizing_server_configuration/configuration_layers>`_,
-regardless of use of custom rules. This will ensure that this configuration is patched last, and will clearly
-communicate that the configuration may vary by deployment environment.
+for environment-specific configurations where you need to ensure the configuration is patched last. This also clearly
+communicates that the configuration may vary by deployment environment.
 
 
 

@@ -35,11 +35,16 @@ vary in structure, can reduce the need for sub-layouts quite
 considerably and should be considered for all projects. Elastic layouts
 are typically achieved through the use of dynamic placeholders, i.e.
 allowing the number of placeholders of a page to vary and thereby
-allowing an editor to construct page variations at will. Note that the
-Sitecore Experience Platform does not provide support for dynamic
-placeholders out of the box, but there are multiple variations available
-as open source or through the Sitecore marketplace, for example
-https://marketplace.sitecore.net/en/Modules/I/Integrated_Dynamic_Placeholders.aspx
+allowing an editor to construct page variations at will.
+As of Sitecore 9.0, Sitecore provides
+`out of the box support for dynamic placeholders <https://doc.sitecore.net/sitecore_experience_platform/developing/developing_with_sitecore/dynamic_placeholders>`_.
+
+.. tip::
+    For versions of Sitecore prior to 9.0, there are community dynamic placeholder implementations available
+    via nuget or the Sitecore Marketplace (`Example 1 <https://www.nuget.org/packages/DynamicPlaceholders.Mvc/>`_,
+    `Example 2 <https://marketplace.sitecore.net/en/Modules/I/Integrated_Dynamic_Placeholders.aspx>`_). Note that these
+    modules are not supported by Sitecore, and you may need to convert your data to the Sitecore 9 dynamic placeholder
+    format when upgrading.
 
 .. admonition:: Habitat Example
 
@@ -101,8 +106,3 @@ https://marketplace.sitecore.net/en/Modules/I/Integrated_Dynamic_Placeholders.as
                 @RenderAssetsService.Current.RenderScript(ScriptLocation.Body)
             </body>
         </html>
-
-    The Habitat example site uses the DynamicPlaceholders.Mvc package
-    available through NuGet
-    (https://www.nuget.org/packages/DynamicPlaceholders.Mvc/) to allow
-    elastic page layouts.

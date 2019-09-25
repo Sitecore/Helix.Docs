@@ -2,10 +2,10 @@ Projects
 ~~~~~~~~
 
 A Visual Studio solution can host a number of different project types,
-such as Web Application projects, unit test projects, Team Development
-for Sitecore (TDS) projects, behavioural testing projects, Xamarin
-projects, etc., but modules are always grouped by their logical
-connection to a module – and never by type.
+such as Web Application projects, Commerce Engine plugins, unit test projects, 
+Team Development for Sitecore (TDS) projects, behavioural testing 
+projects, Xamarin projects, etc., but modules are always grouped 
+by their logical connection to a module – and never by type.
 
 Projects are grouped together in a solution by the layer and module to
 which they belong.
@@ -30,10 +30,19 @@ with:
 3. The logical module grouping (optionally)
 4. The module name
 5. The logical function of the project
+6. The target subsystem (optionally)
 
 For example, the following VS project contains the unit tests for the
-commerce orders feature module:
+News feature module:
 
 ::
 
-    Sitecore.Feature.Commerce.Orders.Tests
+    Sitecore.Feature.News.Tests
+
+Another example would be the following VS projects containing the functionality
+required for the Carts plugin that runs on the Commerce Engine and related website code.
+
+::
+
+    Sitecore.Feature.Carts.Engine
+    Sitecore.Feature.Carts.Website

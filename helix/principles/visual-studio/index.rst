@@ -18,16 +18,17 @@ In large scale implementations, it is therefore often helpful to break
 down your implementation into multiple Visual Studio Solutions – each
 with a logical grouping, for example independent Foundation modules,
 cross-project or reusable modules or feature groupings such as Basic
-Website or Commerce features.
+Website or modules that target a specific subsystem for example the 
+Commerce Engine.
 
 In this context, though, it is important to stress that each
 architectural module, for example the Navigation Feature module, most
 often will consists of a number of different technologies and tools used
 for the feature and can therefore be represented by different Visual
-Studio projects of different types (for example the main code assembly,
-unit tests, item serialization projects etc.) – but which should always
-be managed together in one Visual Studio solution. Avoid grouping Visual
-Studio project together by technology or type.
+Studio projects of different types (for example the website code assembly,
+Commerce Engine code assembly, unit tests, item serialization projects etc.)
+– but which should always be managed together in one Visual Studio solution.
+Avoid grouping Visual Studio projects together by technology, type or subsystem.
 
 .. toctree::
     :caption: Topics 

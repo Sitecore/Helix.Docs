@@ -92,3 +92,7 @@ development team to make the change. This creates a bottleneck.
 Therefore, the settings specific to the production environment , such as
 those that live in the web.config, should not be maintained through the
 development team tools, but rather through the IT admin tools.
+
+Please note that – although confusing – this does not apply to the 
+Environment definitions that form part of Sitecore Experience Commerce
+which should certainly be included in Source Control.

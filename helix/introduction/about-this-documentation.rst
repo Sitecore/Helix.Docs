@@ -7,8 +7,8 @@ Before you start venturing into a complete understanding of Sitecore Helix – a
 particularly the reasoning behind it – it is a good idea to have
 some experience in developing in ASP.NET and in Sitecore. Although
 the example sites work well as end-to-end examples of
-Sitecore implementation – and as such are a good supplement to the
-Sitecore developer training – the added intricacies of the conventions
+Sitecore implementations (and as such are a good supplement to the
+Sitecore developer training), the added intricacies of the conventions
 can add to an increased learning curve of Sitecore.
 
 The Scope of Sitecore Helix

@@ -3,9 +3,8 @@ Why Sitecore Helix?
 
 The Sitecore Experience Platform lends itself to customer implementations with
 complex requirements through its robust data model, extensibility, and
-integration apabilities. Solutions can span multiple servers/services including
-the core Content/Experience Management capabilities, marketing functionality
-in XConnect, and the e-commerce capabilities of Experience Commerce.
+integration abilities. Solutions can span multiple servers/services including
+the core Content/Experience Management, XConnect, and Experience Commerce.
 
 These large, complex solutions grow over time, and if not managed well, the
 costs and effort associated with changing them will increase to the point at

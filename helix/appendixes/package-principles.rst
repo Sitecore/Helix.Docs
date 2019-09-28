@@ -1,4 +1,4 @@
-Appendix: Principles of Package and Component Design
+Principles of Package and Component Design
 ====================================================
 
 Helix is based on Robert Martin's "Principles of Package and Component Design" 

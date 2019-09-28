@@ -11,4 +11,4 @@ Sitecore Helix Documentation
     introduction/index
     principles/index
     devops/index
-    package-principles
+    appendixes/index

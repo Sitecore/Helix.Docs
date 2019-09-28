@@ -12,9 +12,8 @@ The Principles of Component Cohesion
 ------------------------------------
 Martin's first three principles deal with what goes into a component, and what stays out.
 
-.. note::
-
-    **The Reuse/Release Equivalency Principle (REP)**
+The Reuse/Release Equivalency Principle (REP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     The granule of reuse is the granule of release.
  
@@ -37,9 +36,8 @@ potential for unintended side effects. In Helix terms, this principle could
 be restated as, "The granule of business purpose is the granule of module size,"
 or more simply, "A module should serve a single business audience."
 
-.. note::
-
-    **The Common Reuse Principle (CRP)**
+The Common Reuse Principle (CRP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     The classes in a component are reused together. If you reuse one of the
     classes in a component, you reuse them all.
@@ -56,15 +54,14 @@ should not be forced to depend on methods they do not use" (Martin, ch. 12).
 By using interface templates, and limiting item visibility to these fields, Helix 
 keeps out of the view of the module functionality of other modules, as well as all the
 fields Sitecore uses to manage items (icon, publishing settings, workflow, 
-security). This is why even with Data Source components, Helix prescribes a separation
+security). This is why even with Data Source components, Helix recommends a separation
 between the interface template, owned by the module, and the Data Source template, 
 owned by the Project layer (see `Template types`_).
 
 .. _Template types: principles/templates/template-types.html
-
-.. note::
  
-    **The Common Closure Principle (CCP)**
+The Common Closure Principle (CCP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     The classes in a component should be closed together against the same 
     kinds of changes. A change that affects a component affects all the 
@@ -83,11 +80,10 @@ that module.
 
 Principles of Component Coupling
 --------------------------------
-The last three principles define how components should interact with one another.
+The last three principles define how components (i.e. modules in Helix) should interact with one another.
 
-.. note::
-
-  **The Acyclic Dependencies Principle (ADP)**
+The Acyclic Dependencies Principle (ADP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   
   No cycles will be accepted in the dependency graph.
 
@@ -105,23 +101,21 @@ every other module in the system not to have overlapping field names. (See `Refe
 
 .. _References from Code: principles/templates/references.html
 
-.. note::
-
-  **The Stable Dependencies Principle (SDP)**
+The Stable Dependencies Principle (SDP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   
   Code should depend in the direction of stability
 
 Components that change rarely should not depend on modules that change often, as this reduces the benefit of 
 modularizing stable code. Martin proposes a numerical formula for assessing module stability in terms of class
-dependencies. In Helix, this mechanism is replaced by two guard rails: all visible features should live in "Feature"-layer 
+dependencies. In Helix, this mechanism is replaced by two guard rails: all features should live in "Feature"-layer 
 modules, and no Feature layer module may depend on another. In this way, Helix prevents any business sensitive
 and thus highly dynamic module from depending on another highly dynamic module. This prevents any solution built with this 
 architecture from falling into the conundrum that a business facing feature cannot be easily changed as it provides 
 functionality to another, and apparently unrelated, one.
 
-.. note::
-
-  **The Stable Abstractions Principle (SAP)**
+The Stable Abstractions Principle (SAP)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   A component should be as abstract as it is stable
 

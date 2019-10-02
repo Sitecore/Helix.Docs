@@ -183,8 +183,8 @@ and code files of the feature. This can be done by serialization (see
 :doc:`/principles/sitecore-items/development`). Likewise, changes to configuration files (web.config or Sitecore
 .config include files) must be managed as part of the feature module
 (see :doc:`/principles/configuration/index`). The same applies when working
-with Sitecore Experience Commerce, if you have a module who's functionality 
-spans both the website & the Commerce Engine, then all of it must also
+with Sitecore Experience Commerce, if you have a module whose functionality 
+spans both the website and the Commerce Engine, then all of it must also
 be managed together as part of a single feature module.
 
 A strict awareness of dependencies within the Feature layer is very

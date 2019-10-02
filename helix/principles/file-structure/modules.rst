@@ -14,7 +14,6 @@ of the subsystems.
             /tests         // Unit or other test types for the module
             /commerce      // Houses the code for the plugin that runs on the Commerce Engine
             /xconnect      // Houses the code for plugins targeting the xConnect website
-            /client        // Houses jss client-side code
 
 .. admonition:: Habitat Example
 

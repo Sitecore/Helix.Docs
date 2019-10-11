@@ -6,20 +6,23 @@ complex requirements through its robust data model, extensibility, and
 integration abilities. Solutions can span multiple servers/services including
 the core Content/Experience Management, XConnect, and Experience Commerce.
 
-These large, complex solutions grow over time, and if not managed well, the
-costs and effort associated with changing them will increase to the point at
-which the solution can no longer provide value to the business.
+The amount of technical debt in these large, complex solutions will grow over
+time, and if not managed well, the cost and effort associated with adapting
+the solution to changing requirements will increase to a point where the cost
+of change is higher than the value the change provides to the business.
 
 .. figure:: _static/cost-of-change.png
 
     Figure: Cost of Change over Time
 
-The reasons for this increasing cost are due to the tendency for solutions
-to develop :doc:`uncontrolled dependencies with high coupling </principles/architecture-principles/dependencies>`.
+The reason for this increasing cost is the tendency for solutions
+to develop :doc:`uncontrolled dependencies with high coupling </principles/architecture-principles/dependencies>`
+between features in a code base, when necessary changes/refactoring are
+not made to properly implement requirements (a.k.a. technical debt).
 
-These challenges are not unique to Sitecore. There are some good
-*design principles* that should be used when designing any software project.
-One of the key principles is to be very strict about the dependencies between
+These challenges are not unique to Sitecore. There are some well-established
+*principles of software design* that should be used when designing any software project.
+One of the key principles is to be very explicit about the dependencies between
 software modules. This makes the modules easier to code, test and maintain.
 The principles apply to any software project in any language, so they are equally
 applicable to Java as they are to .NET and Sitecore.

@@ -33,7 +33,7 @@ building with SXA.
 
 Sitecore Helix is not a Rulebook
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Although Sitecore Helix is a set of recommended principles and conventions from
+Although Sitecore Helix is a set of recommended practices and conventions from
 Sitecore itself, it is not a set of rules. Development teams, businesses
 and requirements will differ for each Sitecore solution. Although there are great benefits to be
 gained from aligning to a defined set of conventions, there is also a
@@ -44,3 +44,18 @@ solution. However care must be taken when deviating for the sake of short-term
 velocity -- always keep in mind the core design principles upon which Sitecore
 Helix is based, with the goals of :doc:`maintainability and long-term value <./why-sitecore-helix>`
 for your customer.
+
+The Continuing Evolution of Sitecore Helix
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Sitecore Helix is a set of conventions formed through the collective experiences
+of Sitecore developers. The conventions are formed through open discussions,
+but are formalized by Sitecore. As the Sitecore development technology stack
+will change over time, so will the conventions be adapted and updated to
+support these changes. The underlying reasoning for Sitecore Helix (the why)
+will remain the same, even though the conventions (the how) will change to
+reflect the current world.
+
+Your experience about what works, and what does not, when architecting
+Sitecore solutions is invaluable to the continuing refinement of these
+practices. We welcome feedback and contributions to Sitecore Helix via the
+`Helix Docs GitHub Repository <https://github.com/Sitecore/Helix.Docs>`__.

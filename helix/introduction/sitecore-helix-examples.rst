@@ -15,6 +15,8 @@ how you would apply them to your own solution.
     starter kit for your implementation. You can follow patterns from
     these examples, and even copy code from them as needed, but they
     should not be copied "wholesale" when starting a new implementation.
+    Doing so will add technical debt to your solution since the examples
+    are made for an imaginary solution context.
 
     There's one notable exception to this -- `SXA <#sxa>`__ provides many
     components and platform extensions to help speed your Sitecore implementation

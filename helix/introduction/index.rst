@@ -10,9 +10,10 @@ These practices are based on principles of **modular architecture**
 your solution in a way that creates **more maintainble code**.
 
 Application of modular architecture will **decrease the cost of change**
-of your Sitecore solution and provide more long term value to your customers.
+of your Sitecore solution, help you reduce **technical debt**,
+and provide more long term value to your customers.
 
-These conventions also give the Sitecore Community a **shared language**
+These conventions also give the Sitecore Community a **common terminology**
 for solution architecture, making Sitecore implementations more discoverable
 for current and future developers.
 

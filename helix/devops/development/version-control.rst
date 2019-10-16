@@ -73,7 +73,7 @@ Environment specific settings
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Generally, be careful about storing environment specifics in version
-control, as version control tools are typically used exclusively used in
+control, as version control tools are typically used exclusively in
 the development process, and not during deployment or system
 configuration. Having a too rigid process for deploying environment
 specific changes (for example connection strings for new servers etc.)

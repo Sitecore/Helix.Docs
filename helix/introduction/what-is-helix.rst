@@ -18,8 +18,7 @@ implements the described principles and conventions.
     Throughout the Helix documentation you will find various examples from
     Habitat.
 
-    You can find the running Habitat project on http://habitat.sitecore.net
-    and the source code on http://github.com/sitecore/habitat
+    You can find the the source code on GitHub: http://github.com/sitecore/habitat
 
 Fuelling fast paced Sitecore development
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

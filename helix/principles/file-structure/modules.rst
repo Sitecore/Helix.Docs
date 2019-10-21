@@ -11,9 +11,9 @@ Each module has the following structure:
             /serialization // Contains the serialized data from Sitecore, for example templates, content or security data
             /tests         // Unit or other test types for the module
 
-.. admonition:: Habitat Example
+.. admonition:: Sitecore Helix Examples
 
-    .. figure:: _static/image17.png
+    .. figure:: _static/helix-basic-filesystem-structure.png
 
         Figure: Solution and module structure on disk
 

@@ -11,7 +11,7 @@ Therefore, the tests belong in the Project layer as opposed to together
 with the module in the Feature or Foundation layer.
 
 Code and other files related to tests – independent of whether they are
-unit tests or other testing methodologies – belong in the /tests folder
+unit tests or other testing methodologies – belong in the ``/tests`` folder
 under the respective module.
 
 A single implementation can consist of multiple Visual Studio solutions.
@@ -20,10 +20,10 @@ the unit tests) in a separate solution than the code.
 
 .. admonition:: Habitat Example
 
-    Habitat has a whole range of acceptance tests built with SpecFlow. These
+    Previous versions of Habitat featured acceptance tests built with SpecFlow. These
     are generally structured to test the functionality within a single
     module. But since they rely on the integrated Habitat website to run,
-    they are all located in the *Habitat* project layer module.
+    they were all located in the *Habitat* project layer module.
 
     .. figure:: _static/image47.png
     

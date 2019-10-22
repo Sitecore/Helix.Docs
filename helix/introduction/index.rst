@@ -1,26 +1,27 @@
 Introduction
 ============
 
-There are some good *overall* *design principles* that should be used
-when designing any software project. One of the key principles is to be
-very strict about the dependencies between software modules. This makes
-the modules easier to code, test and maintain. The principles apply to
-any software project in any language so they are equally applicable to
-Java as they are to .NET and Sitecore.
+*Sitecore Helix* is a collection of **recommended practices** and
+**conventions** for the **solution architecture** of Sitecore product
+implementations.
 
-The development guidelines and recommended practices in this documentation
-describe the application of the *overall* *design principles* applied to
-a Sitecore project. It says how modules should be structured and how
-individual sites should use these modules. It is a set of
-recommendations for making your Sitecore project as easy to create,
-test, extend and maintain as possible.
+These practices are based on principles of **modular architecture**
+(a.k.a. package design), which help you to **manage dependencies** in
+your solution in a way that creates **more maintainble code**.
 
-*Helix* is the overall design principles and conventions for Sitecore development described in this documentation. 
+Application of modular architecture will **decrease the cost of change**
+of your Sitecore solution, help you reduce **technical debt**,
+and provide more long term value to your customers.
+
+These conventions also give the Sitecore Community a **common terminology**
+for solution architecture, making Sitecore implementations more discoverable
+for current and future developers.
 
 .. toctree::
     :caption: Topics
     :titlesonly:
 
-    what-is-helix
-    reading
+    why-sitecore-helix
+    sitecore-helix-examples
+    about-this-documentation
     definitions

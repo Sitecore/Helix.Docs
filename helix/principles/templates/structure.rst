@@ -2,21 +2,22 @@ Structure
 ~~~~~~~~~
 
 Given the type-centric nature of Sitecore, templates are all maintained
-under /sitecore/templates in the Sitecore content tree, but
+under ``/sitecore/templates`` in the Sitecore content tree, but
 implementation specific templates are maintained as part of a module.
-Specifically, in the following structure:
+Specifically, in the content tree they use the following structure:
 
-    /sitecore/templates/[Project\|Feature\|Foundation]/[*module*]
+::
 
-where module is the short name of the module, i.e. without prefixes.
+    /sitecore/templates/[Project|Feature|Foundation]/[Module]
 
-.. admonition:: Habitat Example
+where *Module* is the short name of the module, i.e. without prefixes.
 
-    .. figure:: _static/image22.png
+.. admonition:: Sitecore Helix Examples
 
-        Figure: Module specific template folders in Habitat
+    .. figure:: _static/basic-company-template-structure.png
 
-    Since the root layer folders (Project/Feature/Foundation) are not a
-    native part of Sitecore, these folders are created by the
-    Foundation/Serialization module.
+        Figure: Module specific template folders in Helix Basic Company
+
+    The root layer folders (Project/Feature/Foundation) are now a
+    native part of Sitecore.
 

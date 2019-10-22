@@ -22,16 +22,3 @@ modular approach to deploying and running Sitecore in production. Even
 if you version and maintain modules separately in the development
 process, your entire implementation should be integrated and deployed in
 a single versioned process (See :doc:`/devops/integration/index`).
-
-.. admonition:: Habitat Example
-
-    Given the nature of the Habitat example site, all Content and Definition
-    Items are versioned and managed in the development process and
-    integrated and deployed as a single package. This is not possible in a
-    real life scenario where content items are managed in production.
-
-    Tools such as `Team Development for Sitecore`_ can help automate and secure
-    the deployment of all Sitecore items – even Content items – through the
-    environments.
-
-.. _Team Development for Sitecore: http://www.teamdevelopmentforsitecore.com/

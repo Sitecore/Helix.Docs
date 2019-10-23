@@ -79,7 +79,7 @@ A ``Templates`` class should never define constants for templates that are
 not created in the module itself. In cases where Sitecore Helix conventions
 allow a module to reference another (e.g. *Feature* to *Foundation*, or *Project*
 to *Feature*), if a module needs to reference a template or field in that module,
-it should reference the Templates struct in that module. Or better yet, that
+it should reference the ``Templates`` static class in that module. Or better yet, that
 module could expose an extension method or other means of consuming that template,
 to avoid directly referencing the ID constants, as this dependency could make future
 refactoring more difficult.

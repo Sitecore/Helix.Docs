@@ -30,7 +30,7 @@ Build
 Baseline
     Set up a running website/environment based on a clean Sitecore or a defined baseline
     
-    *For example: Install a local Sitecore setup, for example through Sitecore Install Framework. This may involve restoring backup databases with production-like test data. This may also involve restoring a virtual machine or containers with the full running environment.*
+    *For example: Install a local Sitecore setup, for example through Sitecore Installation Framework (SIF). This may involve restoring backup databases with production-like test data. This may also involve restoring a virtual machine or containers with the full running environment.*
 
 Publish
     Publish the modules to the baseline website

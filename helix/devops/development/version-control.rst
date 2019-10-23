@@ -35,39 +35,19 @@ As much as possible, avoid adding standard frameworks and standard files
 to version control. This includes the implementation web.config and
 standard Sitecore config files (see :doc:`/principles/configuration/managing-config-files`).
 
-There are a number of package managers, for example NuGet, Bower,
-node/npm, that are useful to help install and integrate external
+There are a number of package managers, for example NuGet and npm,
+that are useful to help install and integrate external
 frameworks for different purposes. These all largely use the same
 approach. They require a manifest file that points to the required
 versioned packages. This manifest can be versioned alongside your
 implementation specific files to allow your system to pull in the
 packages from external repositories.
 
-.. admonition:: Habitat Example
+.. admonition:: Sitecore Helix Examples
 
-    Habitat uses NuGet packages for .NET dependencies and Bower for
-    front-end technologies. The build system in Habitat is based on gulp and
-    node.js, and therefore uses the node.js Package Manager (npm) for build
-    script dependencies.
-
-Some external dependencies, for example Sitecore itself, cannot
-immediately be integrated via a standard package manager such as NuGet –
-or might require custom configuration to be integrated correctly. For
-this purpose, consider building custom scripts that automate the
-integration or configuration of the dependencies. Remember to version
-these scripts (either in the version control system itself or through a
-package manager manifest) as part of your implementation.
-
-.. admonition:: Habitat Example
-
-    Build scripts in Habitat are versioned as part of the implementation,
-    and have a simple task for pulling in Sitecore dependent assemblies for
-    the build.
-
-Note that there are approaches to adding the Sitecore assemblies to a
-local NuGet repository. One option is to use the Sitecore Instance
-Manager
-(https://marketplace.sitecore.net/en/Modules/Sitecore_Instance_Manager.aspx).
+    The Helix Examples use NuGet packages for .NET dependencies and npm for
+    front-end technologies. For Sitecore assemblies, the examples reference
+    the `Sitecore public NuGet feed <https://doc.sitecore.com/developers/90/sitecore-experience-manager/en/sitecore-public-nuget-feed-faq.html>`__.
 
 Environment specific settings
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -2,25 +2,20 @@ Projects
 ~~~~~~~~
 
 A Visual Studio solution can host a number of different project types,
-such as Web Application projects, unit test projects, Team Development
-for Sitecore (TDS) projects, behavioural testing projects, Xamarin
+such as Web Application projects, unit test projects, Sitecore
+TDS projects, behavioural testing projects, Xamarin
 projects, etc., but modules are always grouped by their logical
 connection to a module – and never by type.
 
 Projects are grouped together in a solution by the layer and module to
 which they belong.
 
-.. admonition:: Habitat Example
+.. admonition:: Sitecore Helix Examples
 
-    .. figure:: _static/image16.png
-        :scale: 75%
+    .. figure:: _static/basic-company-navigation-module.png
 
-        Figure: Project grouping. Please note that even though the
-        SpecFlow (see :doc:`/devops/testing/integration-testing`) projects 
-        might test the individual features, they are grouped with the 
-        Sitecore.Habitat project because they depend on
-        the entire running website, and therefore the Sitecore.Habitat
-        module.
+        Figure: Navigation module in Helix Basic Company with website,
+        TDS, and unit test Visual Studio projects.
 
 A project, and assembly, should be named in a namespace-like fashion
 with:

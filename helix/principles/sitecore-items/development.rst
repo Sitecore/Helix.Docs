@@ -11,31 +11,29 @@ modules.
 Associating items with modules
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Now, for connecting items with modules in Sitecore, we use a basic
+For connecting items with modules in the Sitecore tree, we use a basic
 convention-based approach, where Definition Items are placed in folders
 according to which the layers and module they belong to. This applies to
 the items that belong to the typical configuration areas in Sitecore
 such as:
 
-* /sitecore/templates/[*Project\|Feature\|Foundation*]/[*Module*]
-* /sitecore/system/Settings/[*Project\|Feature\|Foundation*]/[*Module*]
-* /sitecore/layout/renderings/[*Project\|Feature\|Foundation*]/[*Module*]
-* /sitecore/layout/layouts/[*Project\|Feature\|Foundation*]/[*Module*]
-* /sitecore/layout/placeholder settings/[*Project\|Feature\|Foundation*]/[*Module*]
-* /sitecore/layout/models/[*Project\|Feature\|Foundation*]/[*Module*]
+* ``/sitecore/templates/[Project|Feature|Foundation]/[Module]``
+* ``/sitecore/layout/renderings/[Project|Feature|Foundation]/[Module]``
+* ``/sitecore/layout/layouts/[Project|Feature|Foundation]/[Module]``
+* ``/sitecore/layout/placeholder settings/[Project|Feature|Foundation]/[Module]``
 
-.. admonition:: Habitat Example
+.. admonition:: Sitecore Helix Examples
 
-    .. figure:: _static/image18.png
+    .. figure:: _static/basic-company-basic-content-rendering-items.png
 
-        Figure: Rendering items in the Feature/Accounts module
+        Figure: Rendering items in the Helix Basic Company *Feature/Basic Content* module
 
-    .. figure:: _static/image19.png
+    .. figure:: _static/basic-company-basic-content-template-items.png
 
-        Figure: Template items in the Feature/Accounts module
+        Figure: Template items in the Helix Basic Company *Feature/Basic Content* module
 
-Versioning items in modules
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Versioning items in modules with Sitecore TDS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Managing the Definition Items along with the business logic that uses
 them poses a technical challenge, as the items are physically stored in
@@ -45,75 +43,124 @@ serialization comes in handy.
 
 Serialization allows items in the databases (typically in the Master and
 Core database) to be written to disk in a text-based format and
-subsequently restored into a database.
+subsequently restored into a database. Sitecore provides the
+`Sitecore TDS <https://www.teamdevelopmentforsitecore.com/TDS-Classic>`__
+Visual Studio plugin which allows you to serialize and source control
+Sitecore items within a Visual Studio project.
 
 The Helix conventions define that serialized items should be versioned
 as part of the owning module, next to the code and project files. Place
-the serialized items on disk in a subfolder beneath the module:
+the serialized items on disk in a subfolder beneath the module. When using
+Sitecore TDS, the recommended folder structure is:
 
-/src/[*Foundation\|Feature\|Project*]/[*Module*]/serialization
+::
 
-Sitecore supports serialization through the developer toolbar in the
-Content Editor, but this mechanism will by default serialize items to a
-single location on disk – and it therefore not directly compliant with
-the Helix modular architecture. Serialization is also supported through
-the package generation tools.
+    /src
+        /[Foundation|Feature|Project]
+            /[Module Name]
+                /tds
+                    /master
+                        /[Module].Master.scproj     // TDS project for the 'master' database (if needed)
+                    /core       
+                        /[Module].Core.scproj       // TDS project for the 'core' database (if needed)
 
-Both these approaches are very manual in nature, and can be inefficient
-to use with the Helix methodology. It is therefore recommended to look
-into the third party tools available for item serialization, for example
-`Team Development for Sitecore`_ or Unicorn_.
 
-.. _Team Development for Sitecore: http://www.teamdevelopmentforsitecore.com/
-.. _Unicorn: https://github.com/kamsar/Unicorn
+.. note::
 
-.. admonition:: Habitat Example
+    The use of *tds* for the folder name (versus e.g. *serialization*) is in part
+    to reduce the filesystem characters consumed by the convention, which can contribute to
+    challenges with long filesystem paths on Windows.
 
-    The default repository for the Habitat example site uses Unicorn for
-    serialization. The Foundation/Serialization module imports the required
-    NuGet packages and configures the module for the other modules in the
-    implementation. Each module then subsequently configures Unicorn to
-    serialize the relevant items into the /serialization subfolder for the
-    module. Please refer to the Unicorn documentation for more information
-    on using Unicorn.
+When placing the TDS projects within your Visual Studio solution for a module, always place
+them within the solution folder for the associated module.
 
-    .. figure:: _static/image20.png
+Sitecore TDS includes a number of features to assist when working across multiple
+Helix modules in a Visual Studio Solution. See `Sitecore TDS documentation <http://hedgehogdevelopment.github.io/tds/>`__
+for information on `Global Configuration <http://hedgehogdevelopment.github.io/tds/chapter4.html#global-config>`__,
+`Multi-Project Properties <http://hedgehogdevelopment.github.io/tds/chapter4.html#multi-project-properties>`__,
+`Sync All Projects <http://hedgehogdevelopment.github.io/tds/chapter4.html#sync-all-projects-using-history-window>`__,
+`Quick Push <http://hedgehogdevelopment.github.io/tds/chapter4.html#quick-push-items>`__, and more.
 
-        Figure: Serialized items for the Feature/Navigation module
+.. admonition:: Sitecore Helix Examples
 
-    The following shows the Unicorn configuration for the Feature/Navigation module of Habitat
+    The TDS version of Helix Basic Company uses Sitecore TDS to manage Sitecore items
+    for each module.
+
+    .. figure:: _static/basic-company-tds-projects.png
+
+        Figure: TDS projects in the Helix Basic Company - TDS solution.
+
+    .. figure:: _static/basic-company-tds-filesystem.png
+
+        Figure: TDS filesystem folders in the Helix Basic Company - TDS solution.    
+
+Versioning items in modules with Unicorn
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When using the open source `Unicorn <https://github.com/SitecoreUnicorn/Unicorn>`__ utility
+to serialize items, the convention for filesystem organization of items in a module is:
+
+::
+
+    /src
+        /[Foundation|Feature|Project]
+            /[Module Name]
+                /serialization
+                    /[predicate]        // e.g. 'templates' in master
+                    /[predicate]        // e.g. 'renderings' in master
+                    /[predicate]        // e.g. 'buttons' for Experience Editor buttons in core
+
+Typically a  *Foundation/Serialization* module will contain the needed base Unicorn
+references and configuration, and each module with items will define its own Unicorn configuration.
+
+Unicorn's configuration system includes a concept of *abstract* configurations with built-in
+variables replacement for Helix ``$(layer)`` and ``$(module)`` names. For more information,
+see `Unicorn Documentation <https://github.com/SitecoreUnicorn/Unicorn>`__.
+
+.. admonition:: Sitecore Helix Examples
+
+    The Unicorn version of Helix Basic Company uses Unicorn to manage Sitecore items
+    for each module.
+
+    .. figure:: _static/basic-company-unicorn-filesystem.png
+
+        Figure: Serialized items for the *Feature/Basic Content* module
+
+    The base abstract configuration from the *Foundation/Serialization* module is:
 
     .. code-block:: xml
 
         <configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
-        <sitecore>
-            <unicorn>
-            <configurations>
-                <configuration name="Feature.Navigation" description="Feature Navigation" dependencies="Foundation.Serialization,Foundation.Indexing" patch:after="configuration[@name='Foundation.Serialization']">
-                <targetDataStore physicalRootPath="$(sourceFolder)\feature\navigation\serialization" type="Rainbow.Storage.SerializationFileSystemDataStore, Rainbow" useDataCache="false" singleInstance="true" />
-                <predicate type="Unicorn.Predicates.SerializationPresetPredicate, Unicorn" singleInstance="true">
-                    <include name="Feature.Navigation.Templates" database="master" path="/sitecore/templates/Feature/Navigation" />
-                    <include name="Feature.Navigation.Renderings" database="master" path="/sitecore/layout/renderings/Feature/Navigation" />
-                </predicate>
-                <roleDataStore type="Unicorn.Roles.Data.ReverseHierarchyRoleDataStore, Unicorn.Roles" physicalRootPath="$(sourceFolder)\feature\navigation\roles" singleInstance="true"/>
-                <rolePredicate type="Unicorn.Roles.RolePredicates.ConfigurationRolePredicate, Unicorn.Roles" singleInstance="true">
-                    <include domain="modules" pattern="^Feature Navigation .*$" />
-                </rolePredicate>
-                </configuration>
-            </configurations>
-            </unicorn>
-        </sitecore>
+            <sitecore>
+                <unicorn>
+                    <configurations>
+                        <configuration name="Foundation.Serialization.Base" abstract="true">
+                            <targetDataStore physicalRootPath="$(sourceFolder)\$(layer)\$(module)\serialization" />
+                            <predicate type="Unicorn.Predicates.SerializationPresetPredicate, Unicorn" singleInstance="true">
+                            </predicate>
+                            <syncConfiguration type="Unicorn.Loader.DefaultSyncConfiguration, Unicorn" singleInstance="true" updateLinkDatabase="false" updateSearchIndex="true" maxConcurrency="1" />
+                        </configuration>
+                    </configurations>
+                </unicorn>
+            </sitecore>
         </configuration>
 
-.. admonition:: Habitat Example
+    It can then be used to minimize the configuration in other modules, e.g. the *Feature/Basic Content* module:
 
-    Hedgehog Development, the company behind Team Development for Sitecore
-    (TDS), maintains a separate branch for TDS and Habitat. Please refer to
-    this branch, TDS documentation and support for more information on using
-    Helix and Habitat with TDS.
-    https://github.com/HedgehogDevelopment/Habitat/tree/TDS.
+    .. code-block:: xml
 
-        .. figure:: _static/image21.png
-
-            Figure: The Feature/Navigation module using Team Development for Sitecore
-
+        <configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
+            <sitecore>
+                <unicorn>
+                    <configurations>
+                        <configuration name="Feature.BasicContent" extends="Foundation.Serialization.Base" description="BasicContent definition items" dependencies="Foundation.*" patch:after="configuration[@name='Foundation.Serialization.Base']">
+                            <predicate>
+                                <include name="templates" database="master" path="/sitecore/templates/Feature/BasicContent" />
+                                <include name="renderings" database="master" path="/sitecore/layout/renderings/Feature/BasicContent" />
+                                <include name="buttons" database="core" path="/sitecore/content/Applications/WebEdit/Custom Experience Buttons/BasicContent" />
+                            </predicate>
+                        </configuration>
+                    </configurations>
+                </unicorn>
+            </sitecore>
+        </configuration>

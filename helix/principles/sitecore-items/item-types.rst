@@ -44,9 +44,9 @@ These item types are typically Definition items:
 -  Lookup items for settings
 -  All items in the Core database
 
-.. admonition:: Habitat Example
+.. admonition:: Sitecore Helix Examples
 
-    Note how in the Habitat example sites, all Feature and Foundation
+    Note how in the Sitecore Helix Examples, all Feature and Foundation
     modules almost exclusively contain Definition Items. This means that
     when developing or extending modules developers can know that the items
     are managed in the development environment and deployed along with their

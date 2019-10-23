@@ -1,26 +1,16 @@
 Setting up a development environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Optimising the task of setting up a local development environment is not
-just about on-boarding new developers or resetting a developer’s local
-environment – although these tasks can be important to optimise. It is
-also – and sometimes more importantly – about being able to consistently
-and quickly set up a given version of the complete clean implementation
-for testing and troubleshooting.
+The task of setting up a local development environment is
+a critical optimization point for on-boarding new developers
+or resetting a developer’s local environment. It is also
+about being able to consistently and quickly set up a given version
+of the complete clean implementation for testing and troubleshooting.
+This is especially the case during the support phase of a project,
+where there are often fewer resources with less experience, who need to
+quickly spin up a specific version of the local development environment.
 
-Typically, after the initial build phase – where there often is an
-abundance of resources – comes the support or extension phase. In this
-phase, where there are often fewer resources and maybe even less
-experience with the implementation and processes, there is often a need
-for working on multiple branches at the same time, testing on
-production-like environments, the need to establish troubleshooting
-environments, etc. and so the need to quickly spin up a specific version
-of the local development environment increases.
-
-Setting up a local developer machine with a running environment can be
-more or less complex given business requirements and dependencies, but
-the following is an example of the tasks that could be involved and
-example of what each might contain:
+Typical steps of a development environment setup might include:
 
 Check out
     Get the required branch or version from the version control.
@@ -40,7 +30,7 @@ Build
 Baseline
     Set up a running website/environment based on a clean Sitecore or a defined baseline
     
-    *For example: Install a local Sitecore setup, for example through SIM, PowerShell or similar. This may involve restoring backup databases with production-like test data. This may also involve restoring a virtual machine with the full running environment.*
+    *For example: Install a local Sitecore setup, for example through Sitecore Installation Framework (SIF). This may involve restoring backup databases with production-like test data. This may also involve restoring a virtual machine or containers with the full running environment.*
 
 Publish
     Publish the modules to the baseline website
@@ -61,20 +51,42 @@ It is recommended that you automate these steps as far as possible. This
 will increase productivity and quality in both the short and especially
 the long run.
 
-.. admonition:: Habitat Example
+A task runner framework of some kind can be very useful in automating this process.
 
-    Habitat includes an example of an almost fully automated local
-    environment configuration using a combination of various tools. The
-    overall build system uses `Gulp <http://gulpjs.com/>`__, which can be
-    triggered through the `Visual Studio Task
+.. admonition:: Sitecore Helix Examples
+
+    The Sitecore Helix Examples take advantage of a PowerShell-based task runner
+    which Sitecore developers are going to be using anyway -- the Sitecore Installation Framework (SIF).
+    The examples use SIF to manage the Sitecore install and configuration, as well
+    as solution builds and item deployment (particularly when using Unicorn). **The
+    install and build system is optimized for the deployment of multiple examples and
+    thus is likely more complex than needed for most solutions.** However, you may find
+    SIF to be a useful task runner for your own solution as well. See there
+    `SIF Configuration Guide <https://dev.sitecore.net/Downloads/Sitecore_Installation_Framework/2x/Sitecore_Installation_Framework_210.aspx>`__
+    for information on creating custom SIF configurations and tasks.
+
+    .. figure:: _static/basic-company-unicorn-sif-tasks.png
+        :scale: 75%
+
+        Figure: Custom SIF configuration for build and item deploy in Helix Basic Company - Unicorn
+    
+.. admonition:: Habitat Home
+
+    The *Habitat Home* marketing demo sites utilize the popular C#-based task runner,
+    `Cake (C# Make) <https://cakebuild.net/>`__. You can see
+    `examples in the Habitat Home repository <https://github.com/Sitecore/Sitecore.HabitatHome.Platform/blob/master/build.cake>`__.
+
+.. admonition:: Habitat
+
+    The "original" Sitecore Helix example, Habitat, used `Gulp <http://gulpjs.com/>`__,
+    as a task runner to build and deploy, which can be triggered through the `Visual Studio Task
     Runner <https://blogs.msdn.microsoft.com/webdev/2016/01/06/task-runners-in-visual-studio-2015/>`__.
 
-    Please note that the Habitat example site has all content versioned
-    through the version control system – unlike a production environment in
-    which content is managed in production – and can therefore use a clean
-    Sitecore installation as the baseline.
+    Though not as familiar to .NET developers due to the use of JavaScript-based
+    tasks, Gulp may still be a good tool for teams who also need to automate front-end
+    development tasks such as executing webpack configurations.
 
-        .. figure:: _static/image42.png
+    .. figure:: _static/habitat-gulp-task-runner.png
 
-            Figure: Running the Publish task through the Visual Studio Task
-            Runner
+        Figure: Running the Publish task through the Visual Studio Task
+        Runner

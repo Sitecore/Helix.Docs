@@ -18,8 +18,8 @@ Depending on your tools stack – version control, configuration
 management, item serialization etc. – various tools can help you with
 the integration of your modules and solutions into a distributable
 package. The format of this package will depend on the deployment
-strategy and tools you choose. For example, Team Development for
-Sitecore covers the complete application lifecycle from development
+strategy and tools you choose. For example, Sitecore TDS
+covers the complete application lifecycle from development
 through to integration, and supports generation of Sitecore Update and
 NuGet packages that can be automatically installed with for example
 `Octopus Deploy <https://octopus.com/>`__.

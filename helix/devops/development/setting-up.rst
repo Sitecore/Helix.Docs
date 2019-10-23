@@ -1,7 +1,7 @@
 Setting up a development environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Optimising the task of setting up a local development environment is
+The task of setting up a local development environment is
 a critical optimization point for on-boarding new developers
 or resetting a developer’s local environment. It is also
 about being able to consistently and quickly set up a given version

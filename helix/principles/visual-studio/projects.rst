@@ -2,8 +2,8 @@ Projects
 ~~~~~~~~
 
 A Visual Studio solution can host a number of different project types,
-such as Web Application projects, unit test projects, Team Development
-for Sitecore (TDS) projects, behavioural testing projects, Xamarin
+such as Web Application projects, unit test projects, Sitecore
+TDS projects, behavioural testing projects, Xamarin
 projects, etc., but modules are always grouped by their logical
 connection to a module – and never by type.
 

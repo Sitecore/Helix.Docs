@@ -75,7 +75,7 @@ to indicate the layer/source of the items contained there:
 .. admonition:: Sitecore Helix Examples
 
     The Helix Examples use the built-in Sitecore layer folders for organizing
-    items, and serialize items from them using either TDS or Unicorn.
+    items, and serialize items from them using either Sitecore TDS or Unicorn.
     (See :doc:`/principles/sitecore-items/development`)
 
     In Visual Studio, the layers are defined as solution folders:
@@ -291,4 +291,4 @@ there is no recommended standard for naming this layer.
 
     Some of the Sitecore Helix Examples use a small *Environment* layer for projects
     which handle deployment to the main Sitecore Website/Platform service, either
-    using Team Development for Sitecore or Helix Publishing Pipeline.
+    using Sitecore TDS or Helix Publishing Pipeline.

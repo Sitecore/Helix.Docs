@@ -27,9 +27,9 @@ frequency of this task it is imperative that this is easy. Tools and
 automated scripts can help this to become almost transparent for the
 developer.
 
-.. admonition:: Sitecore Helix Examples - TDS
+.. admonition:: Sitecore Helix Examples - Sitecore TDS
 
-    The TDS version of Helix Basic Company uses the built-in
+    The Sitecore TDS version of Helix Basic Company uses the built-in
     `capability of TDS <http://hedgehogdevelopment.github.io/tds/chapter4.html>`__
     to deploy files to the web root on build. To avoid the need for a
     TDS project for modules which do not have associated items, a single
@@ -43,7 +43,7 @@ developer.
 
             Figure: File deployment location, originating in the ``TdsGlobal.config``
 
-    You can also enable the *Content File Sync* feature of TDS to automatically
+    You can also enable the *Content File Sync* feature of Sitecore TDS to automatically
     deploy changes to any content files, such as Razor views and CSS/JS files.
 
         .. figure:: _static/tds-content-file-sync.png

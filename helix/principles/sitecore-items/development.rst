@@ -32,8 +32,8 @@ such as:
 
         Figure: Template items in the Helix Basic Company *Feature/Basic Content* module
 
-Versioning items in modules with TDS
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Versioning items in modules with Sitecore TDS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Managing the Definition Items along with the business logic that uses
 them poses a technical challenge, as the items are physically stored in
@@ -44,14 +44,14 @@ serialization comes in handy.
 Serialization allows items in the databases (typically in the Master and
 Core database) to be written to disk in a text-based format and
 subsequently restored into a database. Sitecore provides the
-`Team Development for Sitecore (TDS) <https://www.teamdevelopmentforsitecore.com/TDS-Classic>`__
+`Sitecore TDS <https://www.teamdevelopmentforsitecore.com/TDS-Classic>`__
 Visual Studio plugin which allows you to serialize and source control
 Sitecore items within a Visual Studio project.
 
 The Helix conventions define that serialized items should be versioned
 as part of the owning module, next to the code and project files. Place
 the serialized items on disk in a subfolder beneath the module. When using
-TDS, the recommended folder structure is:
+Sitecore TDS, the recommended folder structure is:
 
 ::
 
@@ -74,8 +74,8 @@ TDS, the recommended folder structure is:
 When placing the TDS projects within your Visual Studio solution for a module, always place
 them within the solution folder for the associated module.
 
-TDS includes a number of features to assist when working across multiple
-Helix modules in a Visual Studio Solution. See `TDS documentation <http://hedgehogdevelopment.github.io/tds/>`__
+Sitecore TDS includes a number of features to assist when working across multiple
+Helix modules in a Visual Studio Solution. See `Sitecore TDS documentation <http://hedgehogdevelopment.github.io/tds/>`__
 for information on `Global Configuration <http://hedgehogdevelopment.github.io/tds/chapter4.html#global-config>`__,
 `Multi-Project Properties <http://hedgehogdevelopment.github.io/tds/chapter4.html#multi-project-properties>`__,
 `Sync All Projects <http://hedgehogdevelopment.github.io/tds/chapter4.html#sync-all-projects-using-history-window>`__,
@@ -83,7 +83,7 @@ for information on `Global Configuration <http://hedgehogdevelopment.github.io/t
 
 .. admonition:: Sitecore Helix Examples
 
-    The TDS version of Helix Basic Company uses TDS to manage Sitecore items
+    The TDS version of Helix Basic Company uses Sitecore TDS to manage Sitecore items
     for each module.
 
     .. figure:: _static/basic-company-tds-projects.png

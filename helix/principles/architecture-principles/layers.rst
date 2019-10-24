@@ -129,6 +129,11 @@ of the tenant, and this will contain little or no pre-compiled code but
 instead consist of mark-up, styling, layout and templates of
 the item types in Sitecore which the editors can create (see :doc:`/principles/templates/template-types`).
 
+If working with Sitecore Experience Commerce, the Project layer is where
+you will find the Commerce Engine application project. It will then assemble
+all of its required functionality through references to modules in the lower
+layers.
+
 Project layer modules can also be used to expose one feature’s
 functionality to another (that is, *compose* features together),
 without having to directly make one Feature
@@ -142,7 +147,8 @@ Feature Layer
 
 The *Feature* layer contains concrete features of the solution as
 understood by the business owners and editors of the solution, for
-example news, articles, promotions, website search, etc.
+example news, articles, promotions, website search, product listings,
+shopping cart functionality, etc.
 
 The features are expressed as seen in the business domain of the
 solution and not by technology, which means that the responsibility of a
@@ -171,7 +177,10 @@ and rendering items – are managed, versioned and packaged with the views
 and code files of the feature. This can be done by serialization (see
 :doc:`/principles/sitecore-items/development`). Likewise, changes to configuration files (web.config or Sitecore
 .config include files) must be managed as part of the feature module
-(see :doc:`/principles/configuration/index`).
+(see :doc:`/principles/configuration/index`). The same applies when working
+with Sitecore Experience Commerce, if you have a module whose functionality 
+spans both the website and the Commerce Engine, then all of it must also
+be managed together as part of a single feature module.
 
 A strict awareness of dependencies within the Feature layer is very
 important. One Feature module must \ *never* depend on another Feature

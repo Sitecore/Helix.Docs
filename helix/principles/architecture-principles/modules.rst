@@ -73,6 +73,25 @@ should always be in the domain language. (See :doc:`/principles/architecture-pri
     structure and enhancements for multiple Feature modules.
     This includes atemplate for a site root item.
  
+.. admonition:: Habitat Home Commerce Example
+
+  The Commerce version of the Habitat Home Demo includes modules such as:
+
+  Feature/Cart
+    All of the elements that allow users to add Sellable Items to a cart.
+    This includes renderings used on the website, and also the plugin that
+    provides the functionality in the Commerce Engine.
+
+  Feature/Orders
+    All of the elements that allow users to place orders and review order history.
+    This includes renderings used on the website, and also the plugin that
+    provides the functionality in the Commerce Engine.
+
+  Feature/Wish Lists
+    All of the elements that allow users to create and manage product wish lists.
+    This includes renderings used on the website, and also the plugin that
+    provides the functionality in the Commerce Engine.
+
 Groups
 ^^^^^^
 

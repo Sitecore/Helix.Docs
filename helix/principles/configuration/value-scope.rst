@@ -25,6 +25,10 @@ application lifecycle to manage the environment’s specific values.
 Do not manage environment scoped values as part of the development
 process, but rather as part of your deployment procedure (see :doc:`/devops/deployment/index`).
 
+Please note that – although confusing – this does not apply to the 
+Environment definitions that form part of Sitecore Experience Commerce
+these are considered Configuration.
+
 Role scoped values
 ^^^^^^^^^^^^^^^^^^
 

@@ -62,17 +62,31 @@ should always be in the domain language. (See :doc:`/principles/architecture-pri
     The Social feature enables Twitter feeds on the pages as well as
     allows the editor to add Facebook metadata to the website pages.
 
-  Feature/Cart
-    All of the elements that allow users to add Sellable Items to a cart.
-    This includes renderings used on the website, and also the plugin that
-    provides the functionality in the Commerce Engine.
-
   Foundation/Indexing
     This Foundation layer module provides an abstraction layer on the
     search functionality of Sitecore and allows features both to search
     within the data they provide and to integrate into the site-wide
     search.
  
+.. admonition:: Habitat Home Commerce Example
+
+  The Commerce version of the Habitat Home Demo includes modules such as:
+
+  Feature/Cart
+    All of the elements that allow users to add Sellable Items to a cart.
+    This includes renderings used on the website, and also the plugin that
+    provides the functionality in the Commerce Engine.
+
+  Feature/Orders
+    All of the elements that allow users to place orders and review order history.
+    This includes renderings used on the website, and also the plugin that
+    provides the functionality in the Commerce Engine.
+
+  Feature/Wish Lists
+    All of the elements that allow users to create and manage product wish lists.
+    This includes renderings used on the website, and also the plugin that
+    provides the functionality in the Commerce Engine.
+
 Groups
 ^^^^^^
 

@@ -16,9 +16,9 @@ of the subsystems.
             /xconnect      // Houses the code for plugins targeting the xConnect website
             /client        // Houses jss client-side code
 
-.. admonition:: Habitat Example
+.. admonition:: Sitecore Helix Examples
 
-    .. figure:: _static/image17.png
+    .. figure:: _static/helix-basic-filesystem-structure.png
 
         Figure: Solution and module structure on disk
 

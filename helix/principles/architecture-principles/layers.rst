@@ -44,57 +44,59 @@ the solution – in effect, an unstable codebase - and an unstable
 code-base will make your solution hard or impossible to maintain over
 time.
 
-The Sitecore Architecture Conventions defines three layers: Project,
-Feature and Foundation. Each layer have a very clearly defined purpose.
+Sitecore Helix defines three layers: Project,
+Feature and Foundation. Each layer has a very clearly defined purpose.
 In order to structure your Sitecore implementation properly, it is
-important to understand the principles behind each of these.
+important to understand the principles behind these layers.
 
 .. figure:: _static/image7.png
 
-    Figure: Layers in the Sitecore Architecture Conventions
+    Figure: Layers in Sitecore Helix
 
-Practically speaking, the three layers are defined in Visual Studio as
+Practically speaking, the three layers are typically defined in Visual Studio as
 Solution folders, in the file system and directories and in Sitecore as
 corresponding content type folders.
 
-These are the typical places where layer folders are defined in
-Sitecore:
+These typical Sitecore locations contain layer folders out of the box:
 
-* Master:/sitecore/system/Settings/\ *[Project\|Feature\|Foundation]*
-* Master:/sitecore/templates/\ *[Project\|Feature\|Foundation]*
-* Master:/sitecore/templates/branches/\ *[Project\|Feature\|Foundation]*
-* Master:/sitecore/layout/renderings/\ *[Project\|Feature\|Foundation]*
-* Master:/sitecore/layout/layouts/\ *[Project\|Feature\|Foundation]*
-* Master:/sitecore/layout/placeholder settings/\ *[Project\|Feature\|Foundation]*
-* Master:/sitecore/layout/models/\ *[Project\|Feature\|Foundation]*
-* Core:/sitecore/templates/\ *[Project\|Feature\|Foundation]*
+* ``master:/sitecore/templates/[Project|Feature|Foundation]``
+* ``master:/sitecore/templates/branches/[Project|Feature|Foundation]``
+* ``master:/sitecore/layout/renderings/[Project|Feature|Foundation]``
+* ``master:/sitecore/layout/layouts/[Project|Feature|Foundation]``
+* ``master:/sitecore/layout/placeholder settings/[Project|Feature|Foundation]``
 
-.. admonition:: Habitat Example
+Depending on your needs, you may want to create folders in other locations
+to indicate the layer/source of the items contained there:
 
-    In Habitat the Sitecore root folders for the layers – as described above
-    - are managed by the Sitecore.Foundation.Serialization project, as this
-    project is the foundation for Sitecore content serialization in the
-    solution. (See :doc:`/principles/sitecore-items/development`)
+* ``master:/sitecore/system/Settings/[Project|Feature|Foundation]``
+* ``master:/sitecore/layout/models/[Project|Feature|Foundation]``
+* ``core:/sitecore/templates/[Project|Feature|Foundation]``
+
+.. admonition:: Sitecore Helix Examples
+
+    The Helix Examples use the built-in Sitecore layer folders for organizing
+    items, and serialize items from them using either Sitecore TDS or Unicorn.
+    (See :doc:`/principles/sitecore-items/development`)
 
     In Visual Studio, the layers are defined as solution folders:
 
-    .. figure:: _static/image8.png
+    .. figure:: _static/basic-company-solution-folders.png
 
         Figure: Layer Solution Folders in Visual Studio
 
-    On disk, the layers are defined as folders under /src:
+    On disk, in most solutions the layers are defined as folders under /src:
 
-    .. figure:: _static/image9.png
+    .. figure:: _static/basic-company-filesystem-folders.png
 
         Figure: Layer folders under /src on disk
 
-    Example of layer folders in Sitecore under Templates and Layouts:
+    The builtin Sitecore layer folders under Templates and Layouts:
 
-    .. figure:: _static/image10.png
+    .. figure:: _static/builtin-sitecore-template-folders.png
 
         Figure: Layer folders under /sitecore/templates in Sitecore
 
-    .. figure:: _static/image11.png
+    .. figure:: _static/builtin-sitecore-layout-folders.png
 
         Figure: Layer folders under /sitecore/layout/renderings in
         Sitecore
@@ -106,7 +108,8 @@ The Project layer provides the context of the solution. This means the
 actual cohesive website or channel output from the implementation, such
 as the page types, layout and graphical design. It is on this layer that
 all the features of the solution are stitched together into a cohesive
-solution that fits the requirements.
+solution that fits the requirements. Thus it is often referred to as the
+*compositional* layer.
 
 Each time there is a change in a feature, a new one is added or one is
 removed, then this layer will typically change. The layer also brings
@@ -131,17 +134,9 @@ you will find the Commerce Engine application project. It will then assemble
 all of its required functionality through references to modules in the lower
 layers.
 
-.. admonition:: Habitat Example
-
-    In Habitat there are two modules in the Project layer: *Habitat* and
-    *Common*. Habitat represents the actual Habitat website or channel
-    output, and therefore connects the features and page layouts in a way
-    that fits the requirements for this website. The Common module paves the
-    way for a multi-tenant implementation by defining some of the shared
-    templates and settings between tenants.
-
 Project layer modules can also be used to expose one feature’s
-functionality to another without having to directly make one Feature
+functionality to another (that is, *compose* features together),
+without having to directly make one Feature
 module dependant on another, for example through the inversion of
 control or pipeline patterns. However, be careful not to implement
 actual feature-specific business logic in the Project layer in this
@@ -183,8 +178,8 @@ and code files of the feature. This can be done by serialization (see
 :doc:`/principles/sitecore-items/development`). Likewise, changes to configuration files (web.config or Sitecore
 .config include files) must be managed as part of the feature module
 (see :doc:`/principles/configuration/index`). The same applies when working
-with Sitecore Experience Commerce, if you have a module who's functionality 
-spans both the website & the Commerce Engine, then all of it must also
+with Sitecore Experience Commerce, if you have a module whose functionality 
+spans both the website and the Commerce Engine, then all of it must also
 be managed together as part of a single feature module.
 
 A strict awareness of dependencies within the Feature layer is very
@@ -214,8 +209,8 @@ Foundation Layer
 The lowest level layer in Helix is the Foundation layer, which as the
 name suggests forms the foundation of your solution. When a change
 occurs in one of these modules it can impact many other modules in the
-solution. This mean that these modules should be the most stable in your
-solution in term of the \ *Stable Dependencies Principle*.
+solution. This mean that these modules should be the **most stable** in your
+solution in terms of the \ *Stable Dependencies Principle*.
 
 Conceptually, it is helpful to think of all the frameworks and software
 you rely on in your solution as foundation modules. This includes the
@@ -290,3 +285,19 @@ Abstractions Principle:
     Abstractness increases with stability.
 
     http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod
+
+
+Other Layers
+^^^^^^^^^^^^
+
+Increasingly it's common to include a Helix layer which defines infrastructure
+(e.g. Azure Resource Manager templates) or that handle consolidating deployments
+to a particular service in your Sitecore environment. Names for this layer in the
+community include *Infrastructure*, *Environment*, and *Deployment*. At this time
+there is no recommended standard for naming this layer.
+
+.. admonition:: Sitecore Helix Examples
+
+    Some of the Sitecore Helix Examples use a small *Environment* layer for projects
+    which handle deployment to the main Sitecore Website/Platform service, either
+    using Sitecore TDS or Helix Publishing Pipeline.

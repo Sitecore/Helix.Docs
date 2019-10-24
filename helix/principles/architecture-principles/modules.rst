@@ -45,28 +45,33 @@ The name of a module should reflect the business requirement or the use
 case of the feature – never the technology or implementation – and
 should always be in the domain language. (See :doc:`/principles/architecture-principles/domain-language`).
 
-.. admonition:: Habitat Example
+.. admonition:: Sitecore Helix Examples
 
-  These are examples of modules in the Habitat example site:
+  These are examples of modules in the Helix Basic Company site:
 
-  Feature/Accounts
-    This feature handles everything involving user accounts: login,
-    registration, xDB integration, user profiles, etc.
+  Feature/Basic Content
+    The business domain of this Feature module is simple content
+    components that will be used on pages throughout the site. This includes
+    accordions, hero banners, and section headers.
 
   Feature/Navigation
-    All elements of navigation on the website are handled by this module.
-    This includes: primary and secondary menus, breadcrumbs and link
-    lists.
+    The business domain of this Feature module is website
+    navigation elements. This includes the site header /
+    main navigation, and the site footer.
 
-  Feature/Social
-    The Social feature enables Twitter feeds on the pages as well as
-    allows the editor to add Facebook metadata to the website pages.
+  Feature/Products
+    The business domain of this Feature module is product catalog
+    functionality. This includes product listings and detail.
 
-  Foundation/Indexing
-    This Foundation layer module provides an abstraction layer on the
-    search functionality of Sitecore and allows features both to search
-    within the data they provide and to integrate into the site-wide
-    search.
+  Foundation/Field Rendering
+    The domain of this Foundation module is extensions/helpers and
+    customizations related to Sitecore field rendering, which are used
+    across multiple Feature modules.
+
+  Foundation/Multisite
+    The domain of this Foundation module is providing multi-site
+    structure and enhancements for multiple Feature modules.
+    This includes atemplate for a site root item.
  
 .. admonition:: Habitat Home Commerce Example
 

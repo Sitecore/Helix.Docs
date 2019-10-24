@@ -2,7 +2,7 @@ Sitecore Experience Commerce
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When working with Sitecore Experience Commerce, there are several
-more subsystems that you could end up posting code or config changes
+more services that you could end up posting code or config changes
 to. These include:
 
 - Sitecore Commerce Engine roles (Shops, Authoring, Ops, Minions)

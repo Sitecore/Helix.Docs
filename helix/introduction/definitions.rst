@@ -8,7 +8,7 @@ Module
     thereby business centric – way. For example, when the company asks that 
     their Sitecore solution contains website search, all assets, business
     logic and configuration relating to search belongs to the Search module. 
-    These assets can also span across the different target subsystems that make 
+    These assets can also span across the different target services that make 
     up a complete Sitecore installation. For example you could have a module 
     which contains functionality that runs on both the Sitecore website and the 
     Commerce Engine.

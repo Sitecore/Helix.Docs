@@ -22,7 +22,7 @@ architecture of the specific customer implementation. Be aware that a
 Visual Studio Solution should logically group together conceptual
 modules – not VS projects – and therefore all Visual Studio projects
 belonging to a logical module should be managed together in one VS
-solution, regardless of how many subsystems it targets.
+solution, regardless of how many services it targets.
 
 .. admonition:: Habitat Example
 

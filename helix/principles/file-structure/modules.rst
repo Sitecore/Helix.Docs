@@ -3,7 +3,7 @@ Module structure
 
 Each module has the following structure, note that not all modules will contain all of the elements seen below. Only the elements
 that apply to that module should be created, for example not all modules will require serialization or have code that executes on all
-of the subsystems.
+of the services.
 
 ::
 
@@ -14,7 +14,6 @@ of the subsystems.
             /tests         // Unit or other test types for the module
             /commerce      // Houses the code for the plugin that runs on the Commerce Engine
             /xconnect      // Houses the code for plugins targeting the xConnect website
-            /client        // Houses jss client-side code
 
 .. admonition:: Sitecore Helix Examples
 

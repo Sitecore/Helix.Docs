@@ -68,7 +68,7 @@ context this includes not only references between C# classes and .NET
 assemblies, but also references from code to Sitecore templates and
 fields, references between templates, references from templates to
 renderings, references from HTML mark-up to CSS, calls from the Website
-through to other subsystems like the Commerce Engine, and so on. Therefore,
+through to other services like the Commerce Engine, and so on. Therefore,
 when working in a modular architecture environment with Sitecore, make
 sure you constantly keep an eye out for loose coupling or implicit
 dependencies, and actively ensure dependencies are as explicit as

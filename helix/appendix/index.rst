@@ -1,4 +1,4 @@
-Appendixes
+Appendix
 ==========
 
 .. toctree::

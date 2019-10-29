@@ -22,7 +22,7 @@ Helix conventions in .NET namespaces and in the dependencies between classes.
 Effectively, modules have "logical" boundaries rather than "physical"
 boundaries.
 
-You should apply Sitecore Helix in a way that you see as best for your customer,
+You should apply Sitecore Helix in a way that you see as best for your customer, team,
 solution, and requirements -- `it is not a rulebook </introduction/about-this-documentation.html#sitecore-helix-is-not-a-rulebook>`__.
 However the reasons for departing from the conventions should be understood, as well
 as the potential for accumulating technical debt when doing so. The goals of

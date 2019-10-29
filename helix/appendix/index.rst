@@ -1,0 +1,6 @@
+Appendix
+==========
+
+.. toctree::
+
+  package-principles

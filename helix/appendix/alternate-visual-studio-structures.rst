@@ -187,10 +187,10 @@ of Visual Studio projects.
   into a single assembly. This would be the most extreme example of treating a
   Visual Studio project as a unit of *deployment*. Your boundaries between Sitecore
   Helix modules becomes entirely logical, and Common Closure is lost to a large degree.
-* You can split out modules as needed for reuse. This is not explicitly advocated by Sitecore Helix
-  but could be a requirement in organizations with multiple Sitecore deployments and a common
-  shared code base. However in this case you likely should be independently managing
-  and versioning these modules, and distributing them to other solutions via NuGet.
+* You can split out modules as needed for reuse. This could be a requirement in organizations
+  with multiple Sitecore deployments and a common shared code base. However in this case you
+  likely should be independently managing and versioning these modules, and distributing them
+  to other solutions via NuGet.
 
 In all of the approaches above, you will need to consider the structure of your tests,
 serialized items, and projects for `additional Sitecore services </principles/services/index>`__

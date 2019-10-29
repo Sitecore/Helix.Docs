@@ -147,18 +147,22 @@ and versioning these assemblies independently, it is a valid question as to whet
 the modules really merit their own Visual Studio projects.
 
 The modular architecture practices of Sitecore Helix though are meant to improve solution
-*maintainability*. The convention of using a separate web application
-project for each module (which deploys to Sitecore CM/CD) means that all the code and
+*maintainability* and *dependency management*. It's easier to track and manage the dependencies
+to and from a module, as they require an explicit project reference by the developer.
+While these are easy enough to add, is an additional step and something that could be easily flagged in a
+code review.
+
+The convention of using a separate web application
+project for each module (which deploys to Sitecore CM/CD) also means that all the code and
 configuration related to a module are located in one place. Combine that with the module
 filesystem and solution folder structure, and you also have the items, tests, and other related
 code for that module. Practically, it's very easy for a future developer to find/discover
-the code related to a desired system change. It's also easier to track and manage the dependencies
-to and from that module.
+the code related to a desired system change. 
 
 It is true that `FxCop rules <https://www.teamdevelopmentforsitecore.com/Blog/sitecore-helix-fxcop-rules>`__
 can be used to enforce Sitecore Helix dependency rules without separate projects, effectively giving you a
 "logical" boundary between modules to help enforce dependencies. However the loss of physical *Common Closure*
-and the potential maintenance impact should definitely be considered in taking this approach.
+and the potential maintenance impact should still be considered when taking this approach.
 
 
 How to structure when consolidating

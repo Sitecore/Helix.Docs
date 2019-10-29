@@ -43,7 +43,7 @@ modules. Concerns about this practice include:
 The result is that some Sitecore solution architects are inclined to structure
 their Visual Studio solutions with fewer projects, while still following Sitecore
 Helix conventions in .NET namespaces and in the dependencies between classes.
-Effectively, thus modules have "logical" boundaries rather than "physical"
+Effectively, modules have "logical" boundaries rather than "physical"
 boundaries.
 
 You should apply Sitecore Helix in a way that you see as best for your customer,
@@ -144,14 +144,14 @@ feature of Visual Studio 2019 to reduce the number of projects open when working
 on a particular module.
 
 
-The Role of Visual Studio Projects
+The role of Visual Studio projects
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Aside from the pragmatic issues, the architectural question at the root of
-this decision is the role of a project/assembly in Visual Studio. This is in
-fact the subject of Robert C. Martin's *Principles of Package and Component Design*,
+this decision is the role of a project/assembly in Visual Studio. This is
+essentially the subject of Robert C. Martin's *Principles of Package and Component Design*,
 which contain the `underlying principles <package-principles>`__ that Sitecore Helix
 is based on. Based on these principles, Visual Studio projects form a "physical" boundary
-and unit of change in Sitecore Helix.
+and unit of change for modules in Sitecore Helix.
 
 Martin however makes an assumption that modules (packages) are released / deployed
 independently. Due to the versioning and testing complexity this would put on the typical Sitecore
@@ -161,7 +161,7 @@ and versioning these assemblies independently, it is a valid question as to whet
 the modules really merit their own Visual Studio projects.
 
 The modular architecture practices of Sitecore Helix though are meant to improve solution
-*maintainability* and *long-term value*. The convention of using a separate web application
+*maintainability*. The convention of using a separate web application
 project for each module (which deploys to Sitecore CM/CD) means that all the code and
 configuration related to a module are located in one place. Combine that with the module
 filesystem and solution folder structure, and you also have the items, tests, and other related
@@ -171,16 +171,88 @@ to and from that module.
 
 It is true that `FxCop rules <https://www.teamdevelopmentforsitecore.com/Blog/sitecore-helix-fxcop-rules>`__
 can be used to enforce Sitecore Helix dependency rules without separate projects, effectively giving you a
-"logical" boundary between modules to help enforce dependencies. However the loss of *Common Closure*
+"logical" boundary between modules to help enforce dependencies. However the loss of physical *Common Closure*
 and the potential maintenance impact should definitely be considered in taking this approach.
 
 
-How many projects to use when consolidating
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+How to structure when consolidating
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+How you consolidate the projects in your solution will ultimately depend on
+the issue(s) you are attempting to address, and your view on the purpose and role
+of Visual Studio projects.
+
+* You may group Features into combined projects based on the concept of
+  `Feature Groups </principles/architecture-principles/modules.html#groups>`__. This will
+  reduce the number of projects but care must be taken to avoid dependencies between
+  Features in a group.
+* You may place an entire Layer into its own project as a "logical" grouping of modules.
+  This benefits the Feature Layer most, as it should contain far more modules than other layers.
+  Consolidating the Project Layer likely provides little benefit due to the number of modules, and
+  may create confusion around the composition of each Project Module. You should
+  take care when consolidating the Foundation Layer as well, as the allowance for
+  Foundation-to-Foundation references means that these dependencies need to be closely
+  monitored and managed.
+* You can place all the code for a single deployment target (e.g. main Sitecore website CM/CD code)
+  into a single assembly. This would be the most extreme example of treating a
+  Visual Studio project as a unit of *deployment*. Your boundaries between Sitecore
+  Helix modules becomes entirely logical, and Common Closure is lost to a large degree.
+* You can split out modules as needed for reuse. This is not explicitly advocated by Sitecore Helix
+  but could be a requirement in organizations with multiple Sitecore deployments and a common
+  shared code base. However in this case you likely should be independently managing
+  and versioning these modules, and distributing them to other solutions via NuGet.
+
+In all of the approaches above, you will need to consider the structure of your tests,
+serialized items, and projects for `additional Sitecore services </principles/services/index>`__
+as well. At the very least you should aim to retain the "logical" boundaries betweeen modules
+by mirroring the filesystem and namespace structure within each of these.
+
+It's strongly recommended that you use tools such as `FxCop rules <https://www.teamdevelopmentforsitecore.com/Blog/sitecore-helix-fxcop-rules>`__
+and `Sitecore TDS Validation <https://www.hhogdev.com/help/tds/propvalidation>`__ to enforce
+dependency rules between your modules if you consolidate Visual Studio projects in any
+way.
 
 
 Does Sitecore Helix really allow this?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+`Sitecore Helix is not a rulebook </introduction/about-this-documentation.html#sitecore-helix-is-not-a-rulebook>`__.
+You should be pragmatic about applying its conventions rather than religious. When
+deviating from them however, you should always:
 
-.. admonition:: Sitecore Helix Examples
+* Understand why, understand the positive and negative impact of doing so,
+  and anticipate the technical debt you may be accumulating.
+* Document the deviation and alternative convention(s).
+* Ensure you are still striving for `maintainability and long-term value </introduction/why-sitecore-helix>`__.
+
+.. note::
+
+    **Tracking Sitecore Helix Deviations**
+
+    Any time you deviate from standard Sitecore Helix conventions, it's a good practice
+    to document your reasons for doing so, what your solution-specific conventions
+    are, and what the resulting technical debt may be. This documentation should be placed
+    in the repository itself in a ``README``, ``Helix.md``, or similar document.
+
+
+Consolidated Projects Example
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. admonition:: Sitecore Helix Examples - TDS Consolidated
+
+    The *consolidated* version of Helix Basic Company demonstrates the extreme
+    example of using a single web application project for the entirety of the
+    solution.
+
+    .. figure:: _static/basic-company-consolidated-solution.png
+
+            Figure: Solution structure for Helix Basic Company - TDS Consolidated
+
+    Note that additional projects are needed for tests and serialized items. A
+    consolidated structure with Unicorn would similarly need a separate filesystem location
+    for all serialized items. Also notice that even within the Web project, the module
+    configuration files are intermixed.
+
+    It is ultimately the responsibility of the Solution Architect to weigh this loss of
+    "Common Closure" and potential maintenance impact, vs potential improvement in build
+    times, deployment, etc.

@@ -10,7 +10,9 @@ modules. Concerns about this practice include:
   them when adding a module
 * The deployment complexity created by large numbers of assemblies and
   multiple ASP.NET projects
-* Disagreement regarding the appropriate use of Visual Studo Projects /
+* Management of Sitecore and other external dependencies across many projects,
+  especially when upgrading Sitecore dependencies
+* Disagreement regarding the appropriate use of Visual Studio Projects /
   .NET Assemblies
 
 The result is that some Sitecore solution architects are inclined to structure

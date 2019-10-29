@@ -189,8 +189,9 @@ of Visual Studio projects.
 
 * You may group Features into combined projects based on the concept of
   `Feature Groups </principles/architecture-principles/modules.html#groups>`__. This will
-  reduce the number of projects but care must be taken to avoid dependencies between
-  Features in a group.
+  reduce the number of projects but **care must be taken to avoid dependencies** between
+  Features in a group. A Feature Group is merely a logical grouping of modules and
+  does not affect Sitecore Helix conventions around Feature-to-Feature references.
 * You may place an entire Layer into its own project as a "logical" grouping of modules.
   This benefits the Feature Layer most, as it should contain far more modules than other layers.
   Consolidating the Project Layer likely provides little benefit due to the number of modules, and

@@ -5,13 +5,14 @@ One of the most common points of feedback on Sitecore Helix regards its
 use of Visual Studio Projects to organize and set boundaries between
 modules. Concerns about this practice include:
 
-* Build times for large solutions
+* (Re)build times for large solutions
 * The overhead of creating multiple projects and properly organizing
   them when adding a module
 * The deployment complexity created by large numbers of assemblies and
   multiple ASP.NET projects
 * Management of Sitecore and other external dependencies across many projects,
   especially when upgrading Sitecore dependencies
+* Solution load times on underpowered developer hardware
 * Disagreement regarding the appropriate use of Visual Studio Projects /
   .NET Assemblies
 
@@ -28,6 +29,14 @@ as the potential for accumulating technical debt when doing so. The goals of
 `maintainability and long-term value </introduction/why-sitecore-helix>`__ should
 drive these decisions.
 
+.. note::
+    It is true that adding projects to a Visual Studio solution can increase *Rebuild*
+    times due to the overhead in building each project. However build times, with
+    well structured dependencies, *can* be lower for large numbers of projects
+    because projects that are unchanged do not need to be built - so less overall code
+    must be compiled. Having multiple projects in a solution also means that
+    MSBuild can use multiple cores when building the solution, because each project's
+    compile is single threaded.
 
 Are you solving the right problem?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -113,7 +122,8 @@ providing project "templates" which save you some clicks. Take care when
 using these however that you remove any generated projects
 `which the module does not need <#does-your-solution-contain-projects-you-do-not-need>`__.
 
-To improve the performance of Visual Studio and reduce build times, you can
+Newer versions of Visual Studio are also much better optimized for opening large solutions.
+To further improve the performance of Visual Studio and reduce build times, you can
 also consider using the `Filtered Solutions <https://docs.microsoft.com/en-us/visualstudio/ide/filtered-solutions?view=vs-2019>`__
 feature of Visual Studio 2019 to reduce the number of projects open when working
 on a particular module.

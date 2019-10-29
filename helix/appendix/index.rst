@@ -5,4 +5,5 @@ Appendix: Supplemental Content
     :caption: Topics
     :titlesonly:
 
+    package-principles
     alternate-visual-studio-structures

@@ -141,7 +141,8 @@ and unit of change for modules in Sitecore Helix.
 Martin however makes an assumption that modules (packages) are released / deployed
 independently. Due to the versioning and testing complexity this would put on the typical Sitecore
 solution, Sitecore Helix actually `discourages partial deploys of modules </devops/deployment/strategy>`__,
-meaning that the unit of release is the entirety of the application. If we are not deploying
+meaning that the unit of release is the entirety of the application. While modular deployment may be a
+requirement for some very large solutions, if you are not deploying
 and versioning these assemblies independently, it is a valid question as to whether
 the modules really merit their own Visual Studio projects.
 

@@ -128,6 +128,10 @@ also consider using the `Filtered Solutions <https://docs.microsoft.com/en-us/vi
 feature of Visual Studio 2019 to reduce the number of projects open when working
 on a particular module.
 
+Finally, you should ensure that there are no MSBuild customizations in place
+which force projects to build even if no files have changed. This could include
+`BeforeBuild` targets.
+
 
 The role of Visual Studio projects
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

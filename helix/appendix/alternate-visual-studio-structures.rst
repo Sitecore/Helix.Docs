@@ -122,6 +122,17 @@ providing project "templates" which save you some clicks. Take care when
 using these however that you remove any generated projects
 `which the module does not need <#does-your-solution-contain-projects-you-do-not-need>`__.
 
+Recent improvements in the Visual Studio project file format can reduce
+the effort required for external dependency management, and potentially improve
+build times. `The PackageReference format <https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files>`__
+for NuGet references is a significant improvement, and can be used with .NET Framework
+ASP.NET applications, though with `some limitations <https://github.com/NuGet/Home/issues/5877>`__.
+`SDK-style projects <https://docs.microsoft.com/en-us/dotnet/core/tools/csproj#additions>`__
+further reduce overhead of the project system, and are being used successfully in the community
+with Sitecore projects. However these are not `officially supported <https://github.com/dotnet/project-system/issues/2670>`__
+by Microsoft with .NET Framework ASP.NET applications, and thus you may require some MSBuild
+expertise on your team if you wish to do so.
+
 Newer versions of Visual Studio are also much better optimized for opening large solutions.
 To further improve the performance of Visual Studio and reduce build times, you can
 also consider using the `Filtered Solutions <https://docs.microsoft.com/en-us/visualstudio/ide/filtered-solutions?view=vs-2019>`__

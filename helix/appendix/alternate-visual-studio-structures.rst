@@ -1,5 +1,5 @@
-Alterate Visual Studio Solution Structures
-------------------------------------------
+Alternate Visual Studio Solution Structures
+-------------------------------------------
 
 One of the most common points of feedback on Sitecore Helix regards its
 use of Visual Studio Projects to organize and set boundaries between

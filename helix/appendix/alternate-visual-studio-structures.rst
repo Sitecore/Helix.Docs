@@ -187,6 +187,15 @@ How you consolidate the projects in your solution will ultimately depend on
 the issue(s) you are attempting to address, and your view on the purpose and role
 of Visual Studio projects.
 
+* When using Sitecore TDS, you could consolidate *just* your TDS projects into a smaller
+  number of per-layer, per-database projects. This approach has been used successfully
+  by Sitecore (former Hedgehog) services teams.
+    * ``Foundation.Master``
+    * ``Foundation.Core``
+    * ``Feature.Master``
+    * ``Feature.Core``
+    * ``Project.Master``
+    * And potentially an additional TDS project for consolidating/packaging all items.
 * You may group Features into combined projects based on the concept of
   `Feature Groups </principles/architecture-principles/modules.html#groups>`__. This will
   reduce the number of projects but **care must be taken to avoid dependencies** between

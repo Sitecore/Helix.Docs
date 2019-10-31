@@ -46,5 +46,5 @@ maintainable code and lowering the cost of change for your customer.
 
     :doc:`The Architecture Principles Section </principles/architecture-principles/index>` of this document
     describes Sitecore Helix's application of these, and
-    :doc:`The Package Principles Appendix </appendixes/package-principles>` provides a plain-language overview of the principles and how they
+    :doc:`The Package Principles Appendix </appendix/package-principles>` provides a plain-language overview of the principles and how they
     relate to Sitecore Helix practices.

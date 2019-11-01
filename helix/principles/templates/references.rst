@@ -16,9 +16,9 @@ Define constants for a module’s templates in a single static class named
 ``Templates``. This static class is located in the root namespace for the module.
 This makes it easy to explicitly reference a template in the business
 logic or views of the module and makes it easier to discover references to a template
-or field. The conventions define this as a static class to clearly signal the
-``Templates`` type's unique function as a constants holder only, following the
-`conventions for Constants in the Microsoft C# Programming Guide <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/how-to-define-constants>`__.
+or field. The conventions define this as a static class to follow the
+`conventions for Constants in the Microsoft C# Programming Guide <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/how-to-define-constants>`__, as it indicates that the type
+can only contain static members, including constants, and cannot be mistakenly instantiated or derived from.
 
 The ``Templates`` static class should have a nested static class for each template
 which each contains an ID member and a nested static class, Fields, which

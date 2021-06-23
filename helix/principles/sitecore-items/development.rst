@@ -192,7 +192,7 @@ references and configuration, and each module with items will define its own Sit
         Figure: Serialized items for the *Feature/Basic Content* module
 
     When using Sitecore Content Serialization, the base configuration is typically located at the root of your solution and named sitecore.json.
-    Using wildcards you can setup the [project/feature/foundation]/[module name]/module.json structure:
+    Using wildcards you can setup the [project/feature/foundation]/[module name]/[module name].module.json structure:
 
     .. code-block:: json
 

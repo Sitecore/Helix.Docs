@@ -170,14 +170,18 @@ Versioning items in modules with the Sitecore CLI or SVS
 
 When using the `Sitecore CLI <https://doc.sitecore.com/developers/101/developer-tools/en/install-sitecore-command-line-interface.html>`__ 
 or `SVS <https://doc.sitecore.com/developers/101/developer-tools/en/install-sitecore-for-visual-studio.html>`__ 
-to serialize items, the convention for filesystem organization of items in a module is:
+to serialize items, the convention for filesystem organization of items and module configuration is:
 
 ::
 
     /src
         /[Foundation|Feature|Project]
             /[Module Name]
-                /[Module Name].module.json
+                /items
+                    /[Serialized items]
+                    /[Serialized items]
+                /[Module Name].module.json    
+
 
 Typically a *Foundation* module will contain the needed base Sitecore serialization
 references and configuration, and each module with items will define its own Sitecore serialization configuration.
@@ -192,7 +196,7 @@ references and configuration, and each module with items will define its own Sit
         Figure: Serialized items for the *Feature/Basic Content* module
 
     When using Sitecore Content Serialization, the base configuration is typically located at the root of your solution and named sitecore.json.
-    Using wildcards you can setup the [project/feature/foundation]/[module name]/[module name].module.json structure:
+    Using wildcards you can setup the [Foundation|Feature|Project]/[Module Name]/[Module Name].module.json structure:
 
     .. code-block:: json
 
@@ -207,8 +211,8 @@ references and configuration, and each module with items will define its own Sit
             }
         }
 
-    Within each [project/feature/foundation]/[module name] folder a json file should be created with serialization configuration details for the module.
-    e.g. the *Feature/Basic Content* module:
+    Within each [Foundation|Feature|Project]/[Module Name] folder a json file should be created with serialization configuration details for the module.
+    e.g. the *Feature/Basic Content* module (src/Feature/BasicContent/BasicContent.module.json):
 
     .. code-block:: json
 

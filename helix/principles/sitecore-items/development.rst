@@ -189,7 +189,7 @@ references and configuration, and each module with items will define its own Sit
 .. admonition:: Sitecore Helix Examples
 
     The `Helix Basic Company - ASP.NET Core and Sitecore Content Serialization <https://github.com/Sitecore/Helix.Examples/tree/master/examples/helix-basic-aspnetcore>`__ 
-    version of Helix Basic Company uses the Sitecore CLI or SVS to manage Sitecore items for each module.
+    version of Helix Basic Company is setup with support for using the Sitecore CLI or SVS to manage Sitecore items for each module.
 
     .. figure:: _static/basic-company-sitecore-serialization-filesystem.png
 

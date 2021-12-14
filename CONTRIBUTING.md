@@ -27,7 +27,7 @@ Once you have cloned the Docs to your local machine, the following instructions 
 
 	```cd helix```
 
-	```make html ```
+	```make.bat html ```
 
 6. Once make completes, the generated docs will be in the .../Helix.Docs/helix/_build/html directory. Open the `index.html` file in your browser to see the built docs for that project. ``make livehtml`` is recommended, see the next section.
 
@@ -38,7 +38,7 @@ You can also install [sphinx-autobuild](https://github.com/GaretJax/sphinx-autob
 
 1. Run ``make livehtml`` (make.bat on Windows, Makefile on Mac/Linux) from the *helix* directory
  
-    ```make livehtml```
+    ```make.bat livehtml```
 
 2. Browse to `http://127.0.0.1:8000` to see the locally built documentation. 
 

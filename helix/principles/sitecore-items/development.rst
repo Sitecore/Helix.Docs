@@ -164,3 +164,75 @@ see `Unicorn Documentation <https://github.com/SitecoreUnicorn/Unicorn>`__.
                 </unicorn>
             </sitecore>
         </configuration>
+        
+Versioning items in modules with the Sitecore CLI or SVS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+When using the `Sitecore CLI <https://doc.sitecore.com/developers/101/developer-tools/en/install-sitecore-command-line-interface.html>`__ 
+or `SVS <https://doc.sitecore.com/developers/101/developer-tools/en/install-sitecore-for-visual-studio.html>`__ 
+to serialize items, the convention for filesystem organization of items and module configuration is:
+
+::
+
+    /src
+        /[Foundation|Feature|Project]
+            /[Module Name]
+                /items
+                    /[Serialized items]
+                    /[Serialized items]
+                /[Module Name].module.json    
+
+
+Typically a *Foundation* module will contain the needed base Sitecore serialization
+references and configuration, and each module with items will define its own Sitecore serialization configuration.
+
+.. admonition:: Sitecore Helix Examples
+
+    The `Helix Basic Company - ASP.NET Core and Sitecore Content Serialization <https://github.com/Sitecore/Helix.Examples/tree/master/examples/helix-basic-aspnetcore>`__ 
+    version of Helix Basic Company is setup with support for using the Sitecore CLI or SVS to manage Sitecore items for each module.
+
+    .. figure:: _static/basic-company-sitecore-serialization-filesystem.png
+
+        Figure: Serialized items for the *Feature/Basic Content* module
+
+    When using Sitecore Content Serialization, the base configuration is typically located at the root of your solution and named sitecore.json.
+    Using wildcards you can setup the [Foundation|Feature|Project]/[Module Name]/[Module Name].module.json structure:
+
+    .. code-block:: json
+
+        {
+            "$schema": "./.sitecore/schemas/RootConfigurationFile.schema.json",
+            "modules": [
+                "src/*/*/*.module.json"
+            ],
+            "serialization": {
+                "defaultMaxRelativeItemPathLength": 100,
+                "defaultModuleRelativeSerializationPath": "items"
+            }
+        }
+
+    Within each [Foundation|Feature|Project]/[Module Name] folder a json file should be created with serialization configuration details for the module.
+    e.g. the *Feature/Basic Content* module (src/Feature/BasicContent/BasicContent.module.json):
+
+    .. code-block:: json
+
+        {
+            "namespace": "Feature.BasicContent",
+            "items": {
+                "includes": [
+                    {
+                        "name": "templates",
+                        "path": "/sitecore/templates/Feature/BasicContent"
+                    },
+                    {
+                        "name": "renderings",
+                        "path": "/sitecore/layout/Renderings/Feature/BasicContent"
+                    },
+                    {
+                        "name": "buttons",
+                        "database": "core",
+                        "path": "/sitecore/content/Applications/WebEdit/Custom Experience Buttons/BasicContent"
+                    }
+                ]
+            }
+        }

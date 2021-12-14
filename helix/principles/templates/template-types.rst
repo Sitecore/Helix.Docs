@@ -17,7 +17,7 @@ Page type template
     and has a presentation layout.
 Datasource template
     Items from this template are referenced by renderings as a datasource. 
-    Derives from interface templates but has no associated layout.
+    Has no associated layout. Sometimes derives from interface templates.
 Settings template
     Used for lookup items for fields or to hold fields to configure the 
     business logic in modules.
@@ -28,9 +28,9 @@ Folder templates
 ====================  =======================  ======================
 Template Type         Can have a page layout?  Exists in which layers
 ====================  =======================  ======================
-Interface template    No                       Feature or Foundation 
+Interface template    No                       Feature or Foundation
 Page type template    **Yes**                  Project
-Datasource template   No                       Project
+Datasource template   No                       Project or Feature
 Settings template     No                       Feature or Foundation
 Folder templates      No                       All
 ====================  =======================  ======================
@@ -41,7 +41,7 @@ Interface templates
 Interface Templates are maintained in the Feature and Foundation modules
 and form the base of the content for the solution. They are never
 instantiated but are solely used as base templates for Page Type
-Templates or Data Source templates. The primary reason for this is that
+Templates or Datasource templates. The primary reason for this is that
 page items require a layout definition, and a layout definition
 inherently contains references to renderings in other features, which
 means that templates defined in one feature will start referencing other
@@ -163,13 +163,19 @@ Interface templates from which they derive.
 Datasource template
 ^^^^^^^^^^^^^^^^^^^
 
-Datasource templates are similar to Page Type templates in that they
-derive from Interface templates for their content. Datasource templates
-however do not have any renderings and are therefore used for items that
+Datasource templates are used as the `Datasource Template` in Sitecore renderings.
+They do not have any renderings themselves and are therefore used for items that
 are not part of the page or navigation structure of the website.
 
-Like Page Type Templates, Datasource templates live only in the Project
-layer and typically do not have fields themselves.
+The layer and inheritance structure of Datasource templates depends on the
+requirements of your solution. If there is a requirement for project-specific
+Standard Values or project-specific workflow, you may wish to use an Interface
+template in your Feature and create a Datasource template in the Project
+layer. In this case your Datasource template would not have its own fields.
+
+In most cases however, you may not need a separate Interface template,
+and you can create a Datasource template, with its required fields, directly in
+your Feature.
 
 .. admonition:: Habitat Example
 
@@ -184,6 +190,11 @@ layer and typically do not have fields themselves.
 
         Figure: Datasource Templates in Habitat managed in the
         Project.Common module
+
+.. admonition:: Helix Basic Company
+
+    Because Helix Basic Company represents a simpler use case, it does
+    not make use of Interface templates for its datasources.
 
 Given the loose coupling and inheritance structure of the templates,
 renderings typically are unaware of whether the context item they are
